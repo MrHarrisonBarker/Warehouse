@@ -1,0 +1,50 @@
+<h2 mat-dialog-title>New Project</h2>
+<mat-dialog-content class="mat-typography">
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput #Name placeholder="name"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput #Description placeholder="description"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Accent</mat-label>
+    <input matInput #Accent placeholder="#FFFFFF"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Avatar</mat-label>
+    <input matInput #Avatar placeholder="Avatar"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Repo</mat-label>
+    <input matInput #Repo placeholder="Repo"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Employments</mat-label>
+    <input type="text" placeholder="Jon Doe" aria-label="Number" matInput [matAutocomplete]="auto" [(ngModel)]="selectedUser" (keyup.enter)="AddUser()">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of userBank" [value]="option.displayName">
+        <div class="d-flex">
+          <div>{{option.displayName}}</div>
+          <img [src]="option.avatar" width="40px" height="40px" style="border-radius: 50%">
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <div class="d-flex flex-row" id="colleagues"><img *ngFor="let user of selectedUsers" [src]="user.avatar" width="40px" height="40px" style="border-radius: 50%"></div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="newProject(Name.value,Description.value,Accent.value,Avatar.value,Repo.value)">New
+  </button>
+</mat-dialog-actions>

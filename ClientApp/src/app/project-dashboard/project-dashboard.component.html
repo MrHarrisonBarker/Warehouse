@@ -1,0 +1,133 @@
+<div class="d-flex h-100">
+  <app-project-nav></app-project-nav>
+  <div class="w-100 d-flex flex-column" style="max-height: 100vh;">
+    <div class="d-flex p-3 flex-row justify-content-between" id="projectDetails">
+      <div class="d-flex flex-row">
+        <img id="projectAvatar" width="60px" height="60px" [src]="GetProjectFromStore().avatar">
+        <div class="d-flex flex-column mx-3">
+          <div id="projectName">{{GetProjectFromStore().name}}</div>
+          <div id="projectDescription">{{GetProjectFromStore().description}}</div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row">
+        <div id="addUser" (click)="AddUser()"></div>
+        <avatar [User]="user" *ngFor="let user of GetProjectColleagues()"></avatar>
+      </div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-around flex-grow-1 overflow-auto">
+
+
+      <div id="projectGrid">
+        <div style="border-right: #ECECEC solid 1px;border-bottom: #ECECEC solid 1px;" class="overflow-auto">
+          <div class="projectTitleBox">
+            <div class="projectTitle">Lists</div>
+            <button mat-icon-button (click)="NewList()">
+              <mat-icon>add_box</mat-icon>
+            </button>
+          </div>
+          <div *ngFor="let list of GetProjectFromStore().lists" class="projectList">
+            <div class="projectList-title">{{list.name}}</div>
+            <div class="project-description">{{list.description | truncate}}</div>
+          </div>
+        </div>
+
+        <div style="border-bottom: #ECECEC solid 1px;" class="overflow-auto">
+          <div class="projectTitleBox">
+            <div class="projectTitle">Events</div>
+            <button mat-icon-button>
+              <mat-icon>add_box</mat-icon>
+            </button>
+          </div>
+          <div *ngFor="let event of GetProjectFromStore().events" class="projectEvent">
+            <div>{{event.name}}</div>
+            <div class="project-description">{{event.time | date:'longDate'}}</div>
+          </div>
+        </div>
+
+        <div style="border-right: #ECECEC solid 1px;" class="overflow-auto">
+          <div class="projectTitleBox">
+            <div class="projectTitle">Jobs</div>
+            <button mat-icon-button>
+              <mat-icon>add_box</mat-icon>
+            </button>
+          </div>
+          <div *ngFor="let job of GetProjectFromStore().jobs" class="projectJobs">
+            <div class="d-flex flex-row align-items-center">
+              <div [style.background]="job.jobStatus.colour" class="blip mr-1"></div>
+              <div [style.background]="job.jobType.colour" class="blip mr-1"></div>
+              <div [style.background]="job.jobPriority.colour" class="blip mr-1"></div>
+              <div class="mx-1">{{job.title}}</div>
+            </div>
+            <div class="project-description">{{job.description | truncate}}</div>
+          </div>
+        </div>
+
+        <div class="overflow-auto">
+          <div class="projectTitleBox">
+            <div class="projectTitle">Rooms</div>
+            <button mat-icon-button>
+              <mat-icon>add_box</mat-icon>
+            </button>
+          </div>
+          <div *ngFor="let room of GetProjectFromStore().rooms" class="projectRoom">
+            <div>{{room.name}}</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--      <div class="d-flex flex-column justify-content-around flex-grow-1" style="border-right: #dedddd solid 1px;">-->
+      <!--        <div class="flex-grow-1 overflow-auto" style="padding: 1rem;border-bottom: #dedddd solid 1px;">-->
+      <!--          <div class="mat-headline">Lists</div>-->
+      <!--&lt;!&ndash;          <button mat-stroked-button color="accent" class="w-100 mb-1" (click)="NewList()">New List</button>&ndash;&gt;-->
+      <!--          <mat-list role="list">-->
+      <!--            <mat-list-item role="listitem" *ngFor="let list of GetProjectFromStore().lists">-->
+      <!--              <div mat-line>{{list.name}}</div>-->
+      <!--              <div mat-line>{{list.description}}</div>-->
+      <!--            </mat-list-item>-->
+      <!--          </mat-list>-->
+      <!--        </div>-->
+      <!--        <div class="flex-grow-1 overflow-auto">-->
+      <!--          <div class="mat-headline">Jobs</div>-->
+      <!--&lt;!&ndash;          <button mat-stroked-button color="accent" class="w-100 mb-1">New Job</button>&ndash;&gt;-->
+      <!--          <mat-list role="list">-->
+      <!--            <mat-list-item role="listitem" *ngFor="let job of GetProjectFromStore().jobs">-->
+      <!--              {{job.title}}-->
+      <!--              &lt;!&ndash;              <div class="info">{{job.jobStatus.name}}</div>&ndash;&gt;-->
+      <!--            </mat-list-item>-->
+      <!--          </mat-list>-->
+      <!--        </div>-->
+      <!--      </div>-->
+
+
+      <!--      <div class="d-flex flex-column justify-content-around flex-grow-1">-->
+      <!--        <div class="flex-grow-1 overflow-auto" style="padding: 1rem;border-bottom: #dedddd solid 1px;">-->
+      <!--          <div class="mat-headline">Events</div>-->
+      <!--&lt;!&ndash;          <button mat-stroked-button color="accent" class="w-100 mb-1">New Event</button>&ndash;&gt;-->
+      <!--          <mat-list role="list">-->
+      <!--            <mat-list-item role="listitem" *ngFor="let event of GetProjectFromStore().events">-->
+      <!--              <div class="d-flex flex-row justify-content-between w-100">-->
+      <!--                <div>{{event.name}}</div>-->
+      <!--                <div>{{event.time | date}}</div>-->
+      <!--              </div>-->
+      <!--            </mat-list-item>-->
+      <!--          </mat-list>-->
+      <!--        </div>-->
+      <!--        <div class="flex-grow-1 overflow-auto">-->
+      <!--          <div class="mat-headline">Rooms</div>-->
+      <!--&lt;!&ndash;          <button mat-stroked-button color="accent" class="w-100 mb-1">New Room</button>&ndash;&gt;-->
+      <!--          <mat-list role="list">-->
+      <!--            <mat-list-item role="listitem" *ngFor="let room of GetProjectFromStore().rooms">{{room.name}}</mat-list-item>-->
+      <!--          </mat-list>-->
+      <!--        </div>-->
+      <!--      </div>-->
+
+
+    </div>
+
+  </div>
+</div>
+
+

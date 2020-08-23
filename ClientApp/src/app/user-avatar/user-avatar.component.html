@@ -1,0 +1,4 @@
+<div class="container-img">
+  <img [src]="User.avatar" [alt]="User.displayName" [width]="Width" [height]="Width" class="p-1">
+  <div class="onlineIndicate" *ngIf="IsUserOnline()"></div>
+</div>

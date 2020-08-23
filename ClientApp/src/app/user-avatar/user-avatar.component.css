@@ -1,0 +1,21 @@
+.onlineIndicate {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #8BC34A;
+  border-radius: 100%;
+  bottom: 5.25px;
+  right: 5.25px;
+  border: solid transparent 2px;
+}
+
+img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container-img {
+  position: relative;
+  text-align: center;
+  color: white;
+}

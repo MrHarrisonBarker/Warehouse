@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center login flex-column">
+  <div class="d-flex" id="tenantInfo">
+    <img [src]="tenantService.Tenant?.avatar" class="img-fluid" width="100px" height="100px">
+    <div class="d-flex flex-column w-100 px-3">
+      <div class="mat-headline">{{tenantService.Tenant?.name}}</div>
+      <div class="mat-subheading-2">{{tenantService.Tenant?.description}}</div>
+    </div>
+  </div>
+
+  <form class="d-flex justify-content-between flex-column" style="width: 30vw;" (ngSubmit)="login(emailFormControl.value,passwordFormControl.value)">
+    <mat-form-field class="m-2" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="emailFormControl" name="email" placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="m-2" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [formControl]="passwordFormControl" name="password" placeholder="Password123">
+    </mat-form-field>
+
+    <div class="d-flex justify-content-between">
+      <button type="submit" cdkFocusInitial class="m-2 w-100" mat-stroked-button>Login</button>
+
+      <button (click)="create()" class="m-2 w-100" mat-stroked-button>Sign up</button>
+    </div>
+  </form>
+</div>

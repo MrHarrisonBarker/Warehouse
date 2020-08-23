@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>New Tenant</h2>
+<mat-dialog-content class="mat-typography">
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput #Name placeholder="name"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput #Description placeholder="description"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Avatar</mat-label>
+    <input matInput #Avatar placeholder="avatar"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Accent</mat-label>
+    <input matInput #Accent placeholder="#FFFFFF"/>
+  </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="CreateTenant(Name.value,Description.value,Avatar.value,Accent.value)">New
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,42 @@
+<div class="d-flex h-100">
+  <div id="sideMenu" class="d-flex flex-column justify-content-between">
+    <div class="d-flex flex-column">
+      <button mat-icon-button aria-label="Overview" class="m-auto">
+        <mat-icon style="color: white">home</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Config" class="m-auto">
+        <mat-icon style="color: white">settings</mat-icon>
+      </button>
+    </div>
+
+    <img [src]="authService.GetUser().avatar" id="userAvatar">
+  </div>
+  <div class="container-fluid">
+    <div class="mat-headline">Dashboard</div>
+    <div class="mat-title">Employments</div>
+    <div class="d-flex">
+      <mat-card class="tenant-card" *ngFor="let tenant of authService.GetUser().employments">
+        <mat-card-header>
+          <div mat-card-avatar class="tenant-header-image"><img width="40px" [src]="tenant.avatar"></div>
+          <mat-card-title>{{tenant.name}}</mat-card-title>
+          <mat-card-subtitle>
+            <div [style.background]="tenant.accent" class="accent"></div>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{tenant.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Go
+            <mat-icon>forward</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      <button mat-raised-button (click)="CreateTenant()" class="tenant-card">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

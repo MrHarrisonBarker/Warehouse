@@ -1,0 +1,21 @@
+<div id="sideMenu" class="d-flex flex-column justify-content-between">
+  <div class="d-flex flex-column">
+    <button mat-icon-button aria-label="Overview" class="m-auto" (click)="router.navigateByUrl('/dashboard')">
+      <mat-icon style="color: white">home</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Work" class="m-auto">
+      <mat-icon style="color: white">work</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Colleagues" class="m-auto">
+      <mat-icon style="color: white">people</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Config" class="m-auto" (click)="router.navigateByUrl('/config')">
+      <mat-icon style="color: white">settings</mat-icon>
+    </button>
+  </div>
+
+  <img [src]="authService.GetUser().avatar" id="userAvatar">
+</div>

@@ -1,0 +1,23 @@
+#jobDetails {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: aliceblue;
+  padding: 1rem;
+  border-left: #ECECEC solid 1px;
+  border-right: #ECECEC solid 1px;
+}
+
+#avatars {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+#job {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}

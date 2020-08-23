@@ -1,0 +1,69 @@
+<div class="d-flex h-100">
+  <tenant-nav></tenant-nav>
+
+  <div class="d-flex flex-column w-100">
+
+    <div>
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Add user</mat-label>
+        <input matInput #email placeholder="mail@harrisonbarker.co.uk"/>
+      </mat-form-field>
+      <button mat-stroked-button color="primary" (click)="AddUser(email.value)">Add user</button>
+    </div>
+
+    <div>
+      <div>Statuses</div>
+      <div *ngFor="let status of tenantService.Tenant.jobStatuses">
+        {{status.name}}
+      </div>
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Name</mat-label>
+        <input matInput #StatusName placeholder="title"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Colour</mat-label>
+        <input matInput #StatusColour placeholder="title"/>
+      </mat-form-field>
+
+      <button mat-stroked-button color="primary" (click)="NewStatus(StatusName.value,StatusColour.value)">Add</button>
+    </div>
+
+    <div>
+      <div>Types</div>
+      <div *ngFor="let type of tenantService.Tenant.jobTypes">
+        {{type.name}}
+      </div>
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Name</mat-label>
+        <input matInput #TypeName placeholder="title"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Colour</mat-label>
+        <input matInput #TypeColour placeholder="title"/>
+      </mat-form-field>
+
+      <button mat-stroked-button color="primary" (click)="NewType(TypeName.value,TypeColour.value)">Add</button>
+    </div>
+
+    <div>
+      <div>Priorities</div>
+      <div *ngFor="let priority of tenantService.Tenant.jobPriorities">
+        {{priority.name}}
+      </div>
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Name</mat-label>
+        <input matInput #PriorityName placeholder="title"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
+        <mat-label>Colour</mat-label>
+        <input matInput #PriorityColour placeholder="title"/>
+      </mat-form-field>
+
+      <button mat-stroked-button color="primary" (click)="NewPriority(PriorityName.value,PriorityColour.value)">Add</button>
+    </div>
+  </div>
+
+</div>

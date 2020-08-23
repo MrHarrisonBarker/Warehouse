@@ -1,0 +1,118 @@
+<div id="sideMenu" class="d-flex flex-column justify-content-between" *ngIf="!extended">
+  <div class="d-flex flex-column">
+
+    <button mat-icon-button aria-label="Extended" class="m-auto" (click)="toggleExtended()">
+      <mat-icon style="color: white">arrow_forward</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Overview" class="m-auto" (click)="router.navigateByUrl('/dashboard')">
+      <mat-icon style="color: white">home</mat-icon>
+    </button>
+
+    <img [src]="this.projectService.currentProject?.avatar" id="projectAvatar" (click)="NavigateToProject()">
+
+    <button mat-icon-button aria-label="Events" class="m-auto">
+      <mat-icon style="color: white">event</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Jobs" class="m-auto" (click)="NavigateToJobs()">
+      <mat-icon style="color: white">article</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Lists" class="m-auto" (click)="NavigateToLists()">
+      <mat-icon style="color: white">list</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Chat" class="m-auto" (click)="NavigateToChat()">
+      <mat-icon style="color: white">chat</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Work" class="m-auto" (click)="NavigateToWork()">
+      <mat-icon style="color: white">work</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Colleagues" class="m-auto" (click)="NavigateToColleagues()">
+      <mat-icon style="color: white">people</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Config" class="m-auto" (click)="NavigateToConfig()">
+      <mat-icon style="color: white">settings</mat-icon>
+    </button>
+  </div>
+
+  <img [src]="authService.GetUser().avatar" id="userAvatar">
+</div>
+
+<div id="extendedSideMenu" class="d-flex flex-column justify-content-between" *ngIf="extended">
+  <div class="d-flex flex-column" style="margin: 0 0 0 7px;">
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Extended" (click)="toggleExtended()">
+        <mat-icon style="color: white">arrow_back</mat-icon>
+      </button>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Overview" (click)="router.navigateByUrl('/dashboard')">
+        <mat-icon style="color: white">home</mat-icon>
+      </button>
+      <div>Overview</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <img [src]="this.projectService.currentProject?.avatar" id="projectAvatarExtended" (click)="NavigateToProject()">
+      <div>{{this.projectService.currentProject?.name}}</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Events" >
+        <mat-icon style="color: white">event</mat-icon>
+      </button>
+      <div>Events</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Jobs"  (click)="NavigateToJobs()">
+        <mat-icon style="color: white">work</mat-icon>
+      </button>
+      <div>Jobs / Issues</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Lists"  (click)="NavigateToLists()">
+        <mat-icon style="color: white">list</mat-icon>
+      </button>
+      <div>Lists</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Chat"  (click)="NavigateToChat()">
+        <mat-icon style="color: white">chat</mat-icon>
+      </button>
+      <div>Chat</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Work"  (click)="NavigateToWork()">
+        <mat-icon style="color: white">work</mat-icon>
+      </button>
+      <div>Work</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Colleagues"  (click)="NavigateToColleagues()">
+        <mat-icon style="color: white">people</mat-icon>
+      </button>
+      <div>Colleagues</div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center">
+      <button mat-icon-button aria-label="Config"  (click)="NavigateToConfig()">
+        <mat-icon style="color: white">settings</mat-icon>
+      </button>
+      <div>Settings</div>
+    </div>
+  </div>
+
+  <img [src]="authService.GetUser().avatar" id="userAvatar">
+</div>

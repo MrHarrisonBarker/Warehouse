@@ -1,0 +1,36 @@
+.listList {
+  background: #676f76;
+  min-width: 20vw;
+  color: #FAFAFA;
+  padding-top: 1rem;
+}
+
+.activeList {
+  background: #ffffff45;
+  box-shadow: inset 0 0 1px black;
+}
+
+.listItem {
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  background: #ffffff45;
+  box-shadow: inset 0 0 1px black;
+}
+
+.listJobItem {
+  padding: 0.1rem 1rem;
+  cursor: pointer;
+}
+
+.listJobItem:hover {
+  background: aliceblue;
+}
+
+.JobPreview {
+  flex-grow: 3;
+
+  /*padding: 1rem;*/
+}

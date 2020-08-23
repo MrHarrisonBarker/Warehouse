@@ -1,0 +1,31 @@
+#sideMenu {
+  background: #808B96;
+  width: min-content;
+  height: 100%;
+}
+
+#userAvatar {
+  width: 50px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+#projectAvatar {
+  width: 40px;
+  border-radius: 25%;
+  margin: auto;
+  cursor: pointer;
+}
+
+#projectAvatarExtended {
+  width: 40px;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+#extendedSideMenu {
+  background: #808B96;
+  width: 200px;
+  height: 100%;
+  color: white;
+}

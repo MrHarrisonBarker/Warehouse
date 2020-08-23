@@ -1,0 +1,84 @@
+<div class="d-flex h-100">
+  <app-project-nav></app-project-nav>
+
+  <div id="roomList">
+    <button mat-icon-button (click)="NewRoom()"><mat-icon>add_box</mat-icon></button>
+    <div *ngFor="let room of chatService.Rooms"  class="listItem" [class.activeRoom]="currentRoomId == room.id">
+      <div class="d-flex justify-content-between align-items-center h-100">
+        <div (click)="GetRoom(room.id)">{{room.name}}</div>
+        <button *ngIf="currentRoomId == room.id" mat-icon-button [matMenuTriggerFor]="roomMenu"><mat-icon>more_vert</mat-icon></button>
+      </div>
+
+      <mat-menu #roomMenu="matMenu">
+        <button mat-menu-item (click)="AddUser(room)">
+          <mat-icon>person_add</mat-icon>
+          <span>Add User</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>delete</mat-icon>
+          <span>Remove</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column flex-grow-1 px-3">
+
+    <div class="d-flex flex-row" id="memberList">
+      <avatar *ngFor="let user of GetRoomUsers()" [User]="user"></avatar>
+    </div>
+
+    <div #room id="room" [scrollTop]="room.scrollHeight">
+      <chat [Chat]="chat" *ngFor="let chat of this.chatService.GetRoomFromStore(this.currentRoomId).chats"></chat>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message #{{this.chatService.GetRoomFromStore(this.currentRoomId)?.name}}</mat-label>
+      <input matInput type="text" [(ngModel)]="message" [formControl]="mentionControl" (keyup.enter)="SendMessage()" [matAutocomplete]="mention" [matAutocompleteDisabled]="message.charAt(0) != '@'">
+
+      <mat-autocomplete autoActiveFirstOption #mention="matAutocomplete" class="pb-0">
+        <mat-option *ngFor="let user of GetRoomUsers()" [value]="'@' + user.id">
+          {{user.displayName}}
+        </mat-option>
+      </mat-autocomplete>
+
+    </mat-form-field>
+  </div>
+
+
+  <!--  <div class="container-fluid d-flex flex-column" *ngIf="chatService.Rooms">-->
+  <!--    <div class="d-flex flex-row flex-grow-1 h-100">-->
+  <!--      <div class="flex-grow-1 m-3">-->
+  <!--        <mat-list role="list">-->
+  <!--          <mat-list-item role="listitem" *ngFor="let room of chatService.Rooms" (click)="GetRoom(room.id)">-->
+  <!--            <div mat-line>{{room.name}}</div>-->
+  <!--          </mat-list-item>-->
+  <!--        </mat-list>-->
+  <!--        <button mat-raised-button (click)="NewRoom()" class="w-100 my-2"><mat-icon>add</mat-icon></button>-->
+  <!--      </div>-->
+
+  <!--      <div id="chatRoom" class="m-3">-->
+  <!--        <div *ngIf="this.chatService.GetRoomFromStore(this.currentRoomId)" class="d-flex flex-column h-100">-->
+  <!--          <div id="room" #room class="" [scrollTop]="room.scrollHeight">-->
+  <!--            <chat [Chat]="chat" *ngFor="let chat of this.chatService.GetRoomFromStore(this.currentRoomId).chats"></chat>-->
+  <!--          </div>-->
+
+  <!--          <mat-form-field appearance="outline">-->
+  <!--            <mat-label>Message #{{this.chatService.GetRoomFromStore(this.currentRoomId)?.name}}</mat-label>-->
+  <!--            <input matInput type="text" [(ngModel)]="message" [formControl]="mentionControl" (keyup.enter)="SendMessage()" [matAutocomplete]="mention" [matAutocompleteDisabled]="message.charAt(0) != '@'">-->
+
+  <!--            <mat-autocomplete autoActiveFirstOption #mention="matAutocomplete">-->
+  <!--              <mat-option *ngFor="let user of GetRoomUsers()" [value]="'@' + user.displayName">-->
+  <!--                {{user.displayName}}-->
+  <!--              </mat-option>-->
+  <!--            </mat-autocomplete>-->
+
+  <!--          </mat-form-field>-->
+  <!--        </div>-->
+  <!--      </div>-->
+
+
+
+  <!--    </div>-->
+  <!--  </div>-->
+</div>

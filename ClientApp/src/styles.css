@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+/*@import '@angular/material/prebuilt-themes/pink-bluegrey.css';*/
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+mat-list {
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)
+}
+
+mat-list-item {
+  border-bottom: solid #00000029 1px;
+}
+
+mat-list-item:hover {
+  background: #e01a76;
+}
+
+.info {
+  padding: 7px 12px;
+  border-radius: 16px;
+  display: inline-flex;
+  cursor: default;
+  background: #333333;
+  color: white;
+}
+
+.greyText {
+  color: #424242;
+}
+
+.blip {
+  width: 15px;
+  height: 15px;
+}
+
+.mentioned {
+  background: #faa61a33;
+}
+
+.mention {
+  background: rgba(114, 137, 218, 0.1);
+  color: #7289da;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.mention:hover {
+  background: #7289da;
+  color: #fff;
+}
