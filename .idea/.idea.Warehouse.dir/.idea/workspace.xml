@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68b3f5c3-5397-4957-b8b9-4f8a5868742b" name="Default Changelist" comment="" />
+    <list default="true" id="68b3f5c3-5397-4957-b8b9-4f8a5868742b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +35,9 @@
         <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
@@ -101,9 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/room.service.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.css" />
         <option value="$PROJECT_DIR$/Services/RoomService.cs" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/Services/chat.service.ts" />
         <option value="$PROJECT_DIR$/Controllers/Client/RoomController.cs" />
@@ -112,7 +120,6 @@
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.html" />
         <option value="$PROJECT_DIR$/Services/ProjectService.cs" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.css" />
@@ -120,11 +127,9 @@
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.css" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" />
@@ -143,7 +148,6 @@
         <option value="$PROJECT_DIR$/appsettings.json" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/truncate.directive.ts" />
         <option value="$PROJECT_DIR$/Warehouse.csproj" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/truncate.pipe.ts" />
         <option value="$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" />
@@ -152,10 +156,18 @@
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/styles.css" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1g8qfzFZYCoHkA9eBIdncwLlJye" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -164,6 +176,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last.edited.regexp" value="@08d846d4-27ef-4de5-8906-482970da8c16" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -223,6 +236,7 @@
       <workItem from="1597992892778" duration="17530000" />
       <workItem from="1598019532006" duration="46606000" />
       <workItem from="1598093487706" duration="26049000" />
+      <workItem from="1598168532336" duration="1859000" />
     </task>
     <servers />
   </component>
@@ -240,10 +254,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="776" y="215" key="RiderGenerateDialog/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1597962511186" />
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1597800672746">
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1598168877726">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1597800672746" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1598168877726" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1598122609365">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

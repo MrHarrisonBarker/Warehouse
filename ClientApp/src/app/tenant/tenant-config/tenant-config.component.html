@@ -3,64 +3,41 @@
 
   <div class="d-flex flex-column w-100">
 
-    <div>
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Add user</mat-label>
-        <input matInput #email placeholder="mail@harrisonbarker.co.uk"/>
-      </mat-form-field>
-      <button mat-stroked-button color="primary" (click)="AddUser(email.value)">Add user</button>
-    </div>
+    <div class="d-flex flex-column">
+      <div class="mat-headline">Statuses</div>
 
-    <div>
-      <div>Statuses</div>
-      <div *ngFor="let status of tenantService.Tenant.jobStatuses">
-        {{status.name}}
+      <div *ngFor="let status of tenantService.Tenant.jobStatuses" class="d-flex flex-row">
+        <label> name <input [value]="status.name"> </label> <label> colour <input [value]="status.colour"> </label>
+        <button mat-icon-button (click)="DeleteStatus(status)"><mat-icon>delete</mat-icon></button>
       </div>
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Name</mat-label>
-        <input matInput #StatusName placeholder="title"/>
-      </mat-form-field>
 
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Colour</mat-label>
-        <input matInput #StatusColour placeholder="title"/>
-      </mat-form-field>
+      <div class="d-flex flex-row"><label> name <input #StatusName> </label> <label> colour <input #StatusColour> </label></div>
 
       <button mat-stroked-button color="primary" (click)="NewStatus(StatusName.value,StatusColour.value)">Add</button>
     </div>
 
-    <div>
-      <div>Types</div>
-      <div *ngFor="let type of tenantService.Tenant.jobTypes">
-        {{type.name}}
-      </div>
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Name</mat-label>
-        <input matInput #TypeName placeholder="title"/>
-      </mat-form-field>
+    <div class="d-flex flex-column">
+      <div class="mat-headline">Types</div>
 
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Colour</mat-label>
-        <input matInput #TypeColour placeholder="title"/>
-      </mat-form-field>
+      <div *ngFor="let type of tenantService.Tenant.jobTypes" class="d-flex flex-row">
+        <label> name <input [value]="type.name"> </label> <label> colour <input [value]="type.colour"> </label>
+        <button mat-icon-button (click)="DeleteType(type)"><mat-icon>delete</mat-icon></button>
+      </div>
+
+      <div class="d-flex flex-row"><label> name <input #TypeName> </label> <label> colour <input #TypeColour> </label></div>
 
       <button mat-stroked-button color="primary" (click)="NewType(TypeName.value,TypeColour.value)">Add</button>
     </div>
 
-    <div>
-      <div>Priorities</div>
-      <div *ngFor="let priority of tenantService.Tenant.jobPriorities">
-        {{priority.name}}
-      </div>
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Name</mat-label>
-        <input matInput #PriorityName placeholder="title"/>
-      </mat-form-field>
+    <div class="d-flex flex-column">
+      <div class="mat-headline">Priorities</div>
 
-      <mat-form-field appearance="outline" class="mr-3 flex-grow-1">
-        <mat-label>Colour</mat-label>
-        <input matInput #PriorityColour placeholder="title"/>
-      </mat-form-field>
+      <div *ngFor="let priority of tenantService.Tenant.jobPriorities" class="d-flex flex-row">
+        <label> name <input [value]="priority.name"> </label> <label> colour <input [value]="priority.colour"> </label>
+        <button mat-icon-button (click)="DeletePriority(priority)"><mat-icon>delete</mat-icon></button>
+      </div>
+
+      <div class="d-flex flex-row"><label> name <input #PriorityName> </label> <label> colour <input #PriorityColour> </label></div>
 
       <button mat-stroked-button color="primary" (click)="NewPriority(PriorityName.value,PriorityColour.value)">Add</button>
     </div>

@@ -17,9 +17,9 @@
         <e p="dist" t="Include">
           <e p="3rdpartylicenses.txt" t="Include" />
           <e p="index.html" t="Include" />
-          <e p="main-es2015.64c5a4dbaafafa92282a.js" t="Include" />
-          <e p="main-es2015.64c5a4dbaafafa92282a.js.LICENSE.txt" t="Include" />
-          <e p="main-es5.64c5a4dbaafafa92282a.js" t="Include" />
+          <e p="main-es2015.e4bcabf0b3e6a262c37b.js" t="Include" />
+          <e p="main-es2015.e4bcabf0b3e6a262c37b.js.LICENSE.txt" t="Include" />
+          <e p="main-es5.e4bcabf0b3e6a262c37b.js" t="Include" />
           <e p="polyfills-es2015.ffa9bb4e015925544f91.js" t="Include" />
           <e p="polyfills-es2015.ffa9bb4e015925544f91.js.LICENSE.txt" t="Include" />
           <e p="polyfills-es5-es2015.3a0804603bb0e28bfd6d.js.LICENSE.txt" t="Include" />
@@ -28,7 +28,7 @@
           <e p="runtime-es5.cdfb0ddb511f65fdc0a0.js" t="Include" />
           <e p="scripts.6d1c350acf8d4755f84d.js" t="Include" />
           <e p="scripts.6d1c350acf8d4755f84d.js.LICENSE.txt" t="Include" />
-          <e p="styles.d4cd79bbc0b6bf3bd8d2.css" t="Include" />
+          <e p="styles.349b8b7a3b44f2713466.css" t="Include" />
         </e>
         <e p="e2e" t="Include">
           <e p="protractor.conf.js" t="Include" />
@@ -244,6 +244,12 @@
                 <e p="job.component.html" t="Include" />
                 <e p="job.component.spec.ts" t="Include" />
                 <e p="job.component.ts" t="Include" />
+                <e p="jobs" t="Include">
+                  <e p="jobs.component.css" t="Include" />
+                  <e p="jobs.component.html" t="Include" />
+                  <e p="jobs.component.spec.ts" t="Include" />
+                  <e p="jobs.component.ts" t="Include" />
+                </e>
                 <e p="new-job" t="Include">
                   <e p="new-job.component.css" t="Include" />
                   <e p="new-job.component.html" t="Include" />
@@ -280,6 +286,12 @@
                 <e p="project-nav.component.html" t="Include" />
                 <e p="project-nav.component.spec.ts" t="Include" />
                 <e p="project-nav.component.ts" t="Include" />
+              </e>
+              <e p="project-users" t="Include">
+                <e p="project-users.component.css" t="Include" />
+                <e p="project-users.component.html" t="Include" />
+                <e p="project-users.component.spec.ts" t="Include" />
+                <e p="project-users.component.ts" t="Include" />
               </e>
               <e p="rooms" t="Include">
                 <e p="add-room-user" t="Include">
@@ -358,6 +370,12 @@
                 <e p="tenant-nav.component.html" t="Include" />
                 <e p="tenant-nav.component.spec.ts" t="Include" />
                 <e p="tenant-nav.component.ts" t="Include" />
+              </e>
+              <e p="tenant-users" t="Include">
+                <e p="tenant-users.component.css" t="Include" />
+                <e p="tenant-users.component.html" t="Include" />
+                <e p="tenant-users.component.spec.ts" t="Include" />
+                <e p="tenant-users.component.ts" t="Include" />
               </e>
             </e>
             <e p="tenant-dashboard" t="Include">

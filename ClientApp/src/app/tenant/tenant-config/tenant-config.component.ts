@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TenantService} from "../../Services/tenant.service";
+import {JobPriority, JobStatus, JobType} from "../../Models/Job";
 
 @Component({
   selector: 'app-tenant-config',
@@ -50,5 +51,20 @@ export class TenantConfigComponent implements OnInit
     {
       console.log(success);
     });
+  }
+
+  DeleteType (type: JobType)
+  {
+
+  }
+
+  DeletePriority (priority: JobPriority)
+  {
+
+  }
+
+  DeleteStatus (status: JobStatus)
+  {
+
   }
 }

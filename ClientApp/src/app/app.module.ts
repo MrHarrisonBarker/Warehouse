@@ -52,6 +52,9 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AddTenantUserComponent} from './tenant/add-tenant-user/add-tenant-user.component';
 import {WINDOW_PROVIDERS} from "./window.providers";
 import {TruncatePipe} from "./truncate.pipe";
+import {TenantUsersComponent} from './tenant/tenant-users/tenant-users.component';
+import {ProjectUsersComponent} from './project/project-users/project-users.component';
+import {JobsComponent} from "./project/job/jobs/jobs.component";
 
 
 @NgModule({
@@ -85,7 +88,10 @@ import {TruncatePipe} from "./truncate.pipe";
     TenantNavComponent,
     BottomNotificationComponent,
     AddTenantUserComponent,
-    TruncatePipe
+    TruncatePipe,
+    TenantUsersComponent,
+    ProjectUsersComponent,
+    JobsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
@@ -99,11 +105,12 @@ import {TruncatePipe} from "./truncate.pipe";
       {path: 'project/:id/events', component: EventsComponent, canActivate: [AuthGuard]},
       {path: 'project/:id/lists', component: ListsComponent, canActivate: [AuthGuard]},
       {path: 'project/:id/chat', component: RoomsComponent, canActivate: [AuthGuard]},
-      {path: 'project/:id/jobs', component: OverviewComponent, canActivate: [AuthGuard]},
+      {path: 'project/:id/jobs', component: JobsComponent, canActivate: [AuthGuard]},
       {path: 'project/:id/work', component: WorkComponent, canActivate: [AuthGuard]},
-      {path: 'project/:id/colleagues', component: OverviewComponent, canActivate: [AuthGuard]},
+      {path: 'project/:id/users', component: ProjectUsersComponent, canActivate: [AuthGuard]},
       {path: 'project/:id/config', component: ConfigComponent, canActivate: [AuthGuard]},
       {path: 'config', component: TenantConfigComponent, canActivate: [AuthGuard]},
+      {path: 'users', component: TenantUsersComponent, canActivate: [AuthGuard]}
     ]),
     BrowserAnimationsModule,
     MatButtonModule,
