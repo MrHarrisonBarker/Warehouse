@@ -1,0 +1,57 @@
+<div class="d-flex h-100">
+
+  <tenant-nav></tenant-nav>
+
+  <div class="w-100 d-flex flex-column" style="max-height: 100vh;" *ngIf="!Loading">
+    <div class="d-flex p-3 flex-row justify-content-between" id="tenantDetails">
+      <div class="d-flex flex-row">
+        <img id="tenantAvatar" width="60px" height="60px" [src]="tenantService.Tenant.avatar">
+        <div class="d-flex flex-column mx-3">
+          <div id="tenantName">{{tenantService.Tenant.name}}</div>
+          <div id="tenantDescription">{{tenantService.Tenant.description}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tenantGrid">
+      <div class="d-flex flex-column justify-content-between" style="border-bottom: #ECECEC solid 1px;">
+        <div>
+          <div class="project-inline" *ngFor="let project of projectService.GetProjects()" (click)="GoToProject(project.id)">
+            <div class="d-flex flex-row align-items-center">
+              <div [style.background]="project.accent" class="blip mr-1"></div>
+              <div class="mr-3">{{project.name}}</div>
+              <div class="greyText font-italic">{{project.description}}</div>
+            </div>
+            <div class="d-flex flex-row"><img class="mr-1" *ngFor="let userId of project.employments" width="30px" height="30px" style="border-radius: 25%" [src]="GetUserAvatar(userId)"></div>
+          </div>
+        </div>
+        <div class="user-inline mr-1" (click)="NewProject()">
+          <mat-icon>add_box</mat-icon>
+          New project
+        </div>
+      </div>
+
+      <div class="d-flex flex-column justify-content-between">
+        <div>
+          <div class="user-inline" *ngFor="let user of userService.TenantEmployments" [matMenuTriggerFor]="menu">
+            <img class="mr-1" width="30px" height="30px" style="border-radius: 25%" [src]="user.avatar">
+            <div>{{user.displayName}}</div>
+
+            <mat-menu #menu="matMenu">
+              <div class="d-flex flex-column align-items-center p-3">
+                <img width="60px" height="60px" style="border-radius: 25%" [src]="user.avatar">
+                <div>{{user.displayName}}</div>
+              </div>
+            </mat-menu>
+          </div>
+
+
+        </div>
+        <div class="user-inline mr-1" (click)="AddUser()">
+          <mat-icon>add_box</mat-icon>
+          Add/Invite user
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

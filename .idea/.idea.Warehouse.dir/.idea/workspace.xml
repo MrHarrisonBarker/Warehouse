@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="68b3f5c3-5397-4957-b8b9-4f8a5868742b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Models/Job.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/List.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Models/List.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Models/Project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Tenant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Models/Tenant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/job.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/job.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/list.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/list.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/online-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/online-user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/project.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/tenant.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/tenant.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/Services/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth.guard.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/bottom-notification/bottom-notification.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/bottom-notification/bottom-notification.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/bottom-notification/bottom-notification.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/events.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/new-event/new-event.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/job.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/jobs/jobs.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-users/project-users.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/truncate.pipe.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/user-avatar/user-avatar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Client/JobController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Client/JobController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/MultiTenantContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/MultiTenantContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/TenantData/TenantDataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/TenantData/TenantDataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Job/Job.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tenant/Project/Job/Job.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Job/JobStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tenant/Project/Job/JobStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/JobService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/JobService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,129 +135,120 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/RoomController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/EventController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C33AFD71-6EE0-4892-B8AD-69B81D88AE1C/3DC/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/TenantUserController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/EventService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/TenantData/20200821203854_data.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/20200816183853_fluff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/JobController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ClientApp/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ClientApp/angular.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/RoomMembership.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/573FCB39-4AB0-4FF4-AB71-2F921A1020BA/c7/33ec4141/SpaStaticFilesExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/20200821163412_colours.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/TenantUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/ProjectController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/ListController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TenantResolutionStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/TenantController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MultiTenancyExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/JobExtrasService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/Client/JobExtrasController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C1EF98EA-974E-41F1-A5E9-22CC2279E229/f7/c6728f80/PushSubscription.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Hubs/ChatHub.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97E4139A-6B77-457C-A168-AEE4F6135380/F/HubClientsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/RoomService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/MultiTenantContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/TenantConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/JobType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/20200815174542_inital.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/JobPriority.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Employment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/UserId.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/JobStatus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/ProjectEmployment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Room.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Event.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/ListEmployment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Migrations/20200816030732_users.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/20200815174542_inital.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/20200816030732_users.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/20200816183853_fluff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/20200821163412_colours.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/MultiTenantContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TenantResolutionStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/RoomController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MultiTenancyExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/ListController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/JobController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/TenantUserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hubs/UserHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hubs/ChatHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/JobExtrasController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Role.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97E4139A-6B77-457C-A168-AEE4F6135380/af/4f53dbd8/IHubClients`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Employment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/ProjectController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/OnlineUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Permission.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/TenantConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Client/EventController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/UserId.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/ProjectEmployment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/JobEmployment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/ListEmployment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/RoomMembership.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Room.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Event.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/List.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Project.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/Job.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/List.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/ListService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Tenant/Joins/JobEmployment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/OnlineUser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/JobService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/JobType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/JobStatus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Tenant/Project/Job/JobPriority.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contexts/MultiTenantContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97E4139A-6B77-457C-A168-AEE4F6135380/29/HubCallerClients.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contexts/TenantDataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/JobExtrasService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Migrations/TenantData/20200821203854_data.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/RoomService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/TenantUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/OnlineUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/48AEB736-A6F5-4412-BA76-3CFE1A8656A0/4/Console.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E0136A62-7166-4D20-9E0F-34CE7F593D87/f2/965baafa/EnumerableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C33AFD71-6EE0-4892-B8AD-69B81D88AE1C/65/333ed021/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/TenantService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/ListService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/JobService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/EventService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/ProjectService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/ChatService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ClientApp/package.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Services/RoomService.cs" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/chat.service.ts" />
-        <option value="$PROJECT_DIR$/Controllers/Client/RoomController.cs" />
-        <option value="$PROJECT_DIR$/Controllers/Client/ProjectController.cs" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/project.service.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.html" />
-        <option value="$PROJECT_DIR$/Services/ProjectService.cs" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.ts" />
-        <option value="$PROJECT_DIR$/Controllers/Client/ListController.cs" />
-        <option value="$PROJECT_DIR$/Services/ListService.cs" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/list.service.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/window.providers.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/tenant.service.ts" />
-        <option value="$PROJECT_DIR$/Services/TenantService.cs" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/appsettings.Development.json" />
-        <option value="$PROJECT_DIR$/appsettings.json" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/truncate.directive.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.csproj" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/truncate.pipe.ts" />
-        <option value="$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/styles.css" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.ts" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" />
-        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" />
+        <option value="$PROJECT_DIR$/Models/Tenant/Project/Job/JobStatus.cs" />
+        <option value="$PROJECT_DIR$/Models/Tenant/Project/Job/Job.cs" />
+        <option value="$PROJECT_DIR$/Migrations/TenantData/20200902231111_jobfinish.cs" />
+        <option value="$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Services/JobService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/Client/JobController.cs" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Models/Tenant.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Models/Project.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/user.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Models/List.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/online-user.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/job.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Models/Job.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/tenant.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/list.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/Services/project.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.css" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.css" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.html" />
       </list>
     </option>
   </component>
@@ -170,11 +256,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -182,7 +268,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\Harrison\Desktop\Warehouse\ClientApp\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/ClientApp/node_modules/typescript/lib" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Warehouse">
     <configuration name="Warehouse" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -197,7 +284,7 @@
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
     <configuration name="Warehouse: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -212,10 +299,11 @@
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -237,30 +325,81 @@
       <workItem from="1598019532006" duration="46606000" />
       <workItem from="1598093487706" duration="26049000" />
       <workItem from="1598168532336" duration="1859000" />
+      <workItem from="1599074229399" duration="331000" />
+      <workItem from="1599087994466" duration="22853000" />
+      <workItem from="1599183481220" duration="7982000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1598006281930">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="714" y="275" key="#com.intellij.ide.util.MemberChooser" timestamp="1599152560468">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
+    <state x="714" y="275" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1599102606544" />
+    <state x="714" y="275" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1599152560468" />
     <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1598006281930" />
+    <state width="1358" height="271" key="GridCell.Tab.0.bottom" timestamp="1599074665187">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1599074665187" />
+    <state width="1358" height="271" key="GridCell.Tab.0.center" timestamp="1599074665186">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1599074665186" />
+    <state width="1358" height="271" key="GridCell.Tab.0.left" timestamp="1599074665185">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1599074665185" />
+    <state width="1358" height="271" key="GridCell.Tab.0.right" timestamp="1599074665186">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1358" height="271" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1599074665186" />
     <state x="776" y="215" key="RiderGenerateDialog" timestamp="1597962511186">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="776" y="215" key="RiderGenerateDialog/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1597962511186" />
+    <state x="397" y="210" key="SettingsEditor" timestamp="1599152025830">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="397" y="210" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1599088656705" />
+    <state x="397" y="210" key="SettingsEditor/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1599152025830" />
+    <state x="565" y="160" width="662" height="822" key="find.popup" timestamp="1599097530850">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="565" y="160" width="662" height="822" key="find.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599097530850" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1599151799597">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599102922485" />
+    <state width="600" height="428" key="javadoc.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1599151799597" />
     <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1598168877726">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" width="672" height="677" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1598168877726" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1598122609365">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="581" y="260" width="672" height="709" key="search.everywhere.popup" timestamp="1599156088603">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
+    <state x="581" y="260" width="672" height="709" key="search.everywhere.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1599156088603" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1598122609365" />
   </component>
 </project>

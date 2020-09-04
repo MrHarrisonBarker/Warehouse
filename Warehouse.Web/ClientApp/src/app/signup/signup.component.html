@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Sign-up</h2>
+<mat-dialog-content class="mat-typography overflow-hidden" style="width: 50vw;">
+  <form [formGroup]="userFormGroup" (ngSubmit)="create(userFormGroup.value)" class="form">
+    <mat-form-field class="form-element" appearance="outline" style="width: 100%">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="John@doe.co.uk" formControlName="Email">
+      <!--      <mat-error *ngIf="!userFormGroup.controls['email'].valid && userFormGroup.controls['email'].touched">-->
+      <!--        {{ getErrorEmail() }}-->
+      <!--      </mat-error>-->
+    </mat-form-field>
+    <br>
+    <mat-form-field class="form-element" appearance="outline" style="width: 100%">
+      <mat-label>Displayname</mat-label>
+      <input matInput placeholder="John.Doe" formControlName="DisplayName">
+    </mat-form-field>
+    <br>
+<!--    <mat-form-field class="form-element" appearance="outline" style="width: 100%">-->
+<!--      <mat-label>Avatar</mat-label>-->
+<!--      <input #avatar matInput formControlName="Avatar">-->
+<!--    </mat-form-field>-->
+    <input type="file" (change)="fileChangeEvent($event)" />
+
+    <div class="d-flex flex-row" style="height: 200px;width: 200px;">
+      <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [aspectRatio]="1"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady()"
+        (loadImageFailed)="loadImageFailed()"
+      ></image-cropper>
+
+      <img [src]="croppedImage" style="height: 200px;width: 200px;" />
+    </div>
+    <br>
+    <mat-form-field class="form-element" appearance="outline" style="width: 100%">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Password123" formControlName="Password">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="create(userFormGroup.value)" cdkFocusInitial>Create
+  </button>
+</mat-dialog-actions>
+

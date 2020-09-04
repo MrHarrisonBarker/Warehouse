@@ -1,0 +1,58 @@
+<div class="d-flex h-100">
+  <app-project-nav></app-project-nav>
+
+  <div *ngIf="!Loading" class="d-flex w-100">
+    <div class="listList">
+
+      <div class="d-flex flex-row" id="listHeading">
+        <div style="font-size: xx-large;">Lists</div>
+        <button mat-icon-button id="newListButton" (click)="NewList()">
+          <mat-icon>add_box</mat-icon>
+        </button>
+      </div>
+
+      <div *ngFor="let list of GetProjectListsFromStore()" (click)="GetListAsync(list.id)">
+        <div class="d-flex flex-column listItem" [class.activeList]="currentListId == list.id">
+          <div>{{list.name}}</div>
+          <div>{{list.description}}</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="d-flex flex-column w-100">
+      <div id="controlBar">
+        <div class="greyText d-flex align-items-center">
+          <mat-icon>domain</mat-icon>
+          <div class="iconAligned">{{tenantService.Tenant?.name}} /</div>
+          <mat-icon>source</mat-icon>
+          <div class="iconAligned">{{projectService.GetCurrentProject()?.name}} /</div>
+          <mat-icon>subject</mat-icon>
+          <div class="iconAligned">{{GetListFromStore().name}}</div>
+        </div>
+        <button mat-stroked-button color="primary" (click)="newJob()">New job</button>
+      </div>
+
+      <div class="d-flex flex-row flex-grow-1">
+        <div class="d-flex flex-column" style="height: fit-content;">
+          <div class="jobStatusList" *ngFor="let status of GetJobsForList()" id="listView">
+            <div class="jobStatusName" [style.background-color]="tenantService.GetStatus(status.statusId).colour">{{tenantService.GetStatus(status.statusId).name}}</div>
+            <div class="listJobItem" *ngFor="let job of status.jobs" (click)="SelectJob(job)" [class.activeJob]="job == selectedJob">
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row align-items-center">
+                  <div [style.background]="tenantService.GetJobStatus(job).colour" class="blip mr-1"></div>
+                  <div [style.background]="tenantService.GetJobType(job).colour" class="blip mr-1"></div>
+                  <div [style.background]="tenantService.GetJobPriority(job).colour" class="blip mr-1"></div>
+                  <div class="mx-1">{{job.title}}</div>
+                  <!--          <div class="mat-caption">{{job.created | date:'short'}}</div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <job-preview class="JobPreview" *ngIf="selectedJob" [Job]="selectedJob" ></job-preview>
+      </div>
+    </div>
+  </div>
+</div>
