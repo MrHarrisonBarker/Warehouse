@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TenantService} from "../../../Services/tenant.service";
-import {JobType} from "../../../Models/Job";
+import {JobType} from "../../../Models/JobType";
 
 @Component({
   selector: 'app-type-config',

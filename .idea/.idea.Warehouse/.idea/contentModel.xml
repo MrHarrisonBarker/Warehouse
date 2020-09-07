@@ -214,9 +214,14 @@
                 <e p="login.component.ts" t="Include" />
               </e>
               <e p="Models" t="Include">
+                <e p="Chat.ts" t="Include" />
                 <e p="Event.ts" t="Include" />
                 <e p="Job.ts" t="Include" />
+                <e p="JobPriority.ts" t="Include" />
+                <e p="JobStatus.ts" t="Include" />
+                <e p="JobType.ts" t="Include" />
                 <e p="List.ts" t="Include" />
+                <e p="Module.ts" t="Include" />
                 <e p="OnlineUser.ts" t="Include" />
                 <e p="Project.ts" t="Include" />
                 <e p="Room.ts" t="Include" />
@@ -285,6 +290,11 @@
                     <e p="new-list.component.ts" t="Include" />
                   </e>
                 </e>
+                <e p="modules" t="Include">
+                  <e p="modules.component.css" t="Include" />
+                  <e p="modules.component.html" t="Include" />
+                  <e p="modules.component.ts" t="Include" />
+                </e>
                 <e p="new-project" t="Include">
                   <e p="new-project.component.css" t="Include" />
                   <e p="new-project.component.html" t="Include" />
@@ -300,6 +310,7 @@
                   <e p="project-users.component.html" t="Include" />
                   <e p="project-users.component.ts" t="Include" />
                 </e>
+                <e p="project.module.ts" t="Include" />
                 <e p="rooms" t="Include">
                   <e p="add-room-user" t="Include">
                     <e p="add-room-user.component.css" t="Include" />
@@ -336,12 +347,14 @@
                 <e p="chat.service.ts" t="Include" />
                 <e p="job.service.ts" t="Include" />
                 <e p="list.service.ts" t="Include" />
+                <e p="module.service.ts" t="Include" />
                 <e p="online-user.service.ts" t="Include" />
                 <e p="project.service.ts" t="Include" />
                 <e p="room.service.ts" t="Include" />
                 <e p="tenant.service.ts" t="Include" />
                 <e p="user.service.ts" t="Include" />
               </e>
+              <e p="shared.module.ts" t="Include" />
               <e p="signup" t="Include">
                 <e p="signup.component.css" t="Include" />
                 <e p="signup.component.html" t="Include" />
@@ -393,6 +406,7 @@
                   <e p="tenant-users.component.html" t="Include" />
                   <e p="tenant-users.component.ts" t="Include" />
                 </e>
+                <e p="tenant.module.ts" t="Include" />
               </e>
               <e p="tenant-dashboard" t="Include">
                 <e p="tenant-dashboard.component.css" t="Include" />
@@ -439,6 +453,7 @@
             <e p="JobController.cs" t="Include" />
             <e p="JobExtrasController.cs" t="Include" />
             <e p="ListController.cs" t="Include" />
+            <e p="ModuleController.cs" t="Include" />
             <e p="ProjectController.cs" t="Include" />
             <e p="RoomController.cs" t="Include" />
             <e p="TenantUserController.cs" t="Include" />
@@ -469,6 +484,12 @@
             <e p="20200904073048_extrasorders.Designer.cs" t="Include" />
             <e p="20200906184315_projectshort.cs" t="Include" />
             <e p="20200906184315_projectshort.Designer.cs" t="Include" />
+            <e p="20200907013130_messagetype.cs" t="Include" />
+            <e p="20200907013130_messagetype.Designer.cs" t="Include" />
+            <e p="20200907014232_modules.cs" t="Include" />
+            <e p="20200907014232_modules.Designer.cs" t="Include" />
+            <e p="20200907021814_projectmodules.cs" t="Include" />
+            <e p="20200907021814_projectmodules.Designer.cs" t="Include" />
             <e p="TenantDataContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
@@ -493,6 +514,7 @@
                 <e p="JobType.cs" t="Include" />
               </e>
               <e p="List.cs" t="Include" />
+              <e p="Module.cs" t="Include" />
               <e p="Project.cs" t="Include" />
               <e p="Room.cs" t="Include" />
             </e>
@@ -526,6 +548,7 @@
           <e p="JobExtrasService.cs" t="Include" />
           <e p="JobService.cs" t="Include" />
           <e p="ListService.cs" t="Include" />
+          <e p="ModuleService.cs" t="Include" />
           <e p="OnlineUserService.cs" t="Include" />
           <e p="ProjectService.cs" t="Include" />
           <e p="RoomService.cs" t="Include" />

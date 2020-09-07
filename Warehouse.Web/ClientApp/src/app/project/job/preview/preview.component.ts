@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Job} from "../../../Models/Job";
 import {User} from "../../../Models/User";
 import {TenantService} from "../../../Services/tenant.service";
@@ -12,26 +12,34 @@ import {ProjectService} from "../../../Services/project.service";
   templateUrl: './preview.component.html',
   styleUrls: ['./preview.component.css']
 })
-export class PreviewComponent implements OnInit
+export class PreviewComponent implements OnInit, OnChanges
 {
 
-  @Input()Job: Job;
+  @Input() Job: Job;
+  public editingTitle: boolean = false;
+  editingDescription: boolean = false;
+  now: Date = new Date();
 
-  constructor (
+  constructor(
     public tenantService: TenantService,
     private jobService: JobService,
     private _snackBar: MatSnackBar,
     private userService: UserService,
-    public projectService: ProjectService)
-  {
+    public projectService: ProjectService) {
   }
 
-  ngOnInit ()
+  ngOnChanges(changes: SimpleChanges): void
   {
+    // console.log(changes);
+    this.Job.deadline = this.Job.deadline == '0001-01-01T00:00:00' ? '' : this.Job.deadline;
   }
 
-  GetUsers (selectedJob: Job): User[]
+  ngOnInit()
   {
+    this.Job.deadline = this.Job.deadline == '0001-01-01T00:00:00' ? '' : this.Job.deadline;
+  }
+
+  GetUsers(selectedJob: Job): User[] {
     return this.userService.TenantEmployments.filter(user => selectedJob.employments.find(e => e.userId == user.id));
   }
 
@@ -41,11 +49,6 @@ export class PreviewComponent implements OnInit
     updatedJob.jobType = this.tenantService.Tenant.jobTypes.find(x => x.id == type);
 
     this.jobService.UpdateTypeAsync(updatedJob).subscribe(updated => {
-      // if (updated) {
-      //   this.Job.jobType = updatedJob.jobType;
-      //   console.log("updated job type",this.Job);
-      //   this._snackBar.open(`Updated type`, 'close', {duration: 1000});
-      // }
     });
   }
 
@@ -54,11 +57,6 @@ export class PreviewComponent implements OnInit
     updatedJob.jobStatus = this.tenantService.Tenant.jobStatuses.find(x => x.id == status);
 
     this.jobService.UpdateStatusAsync(updatedJob).subscribe(updated => {
-      // if (updated) {
-      //   this.Job.jobStatus = updatedJob.jobStatus;
-      //   console.log("updated job status",this.Job);
-      //   this._snackBar.open(`Updated status`, 'close', {duration: 1000});
-      // }
     });
   }
 
@@ -68,11 +66,36 @@ export class PreviewComponent implements OnInit
     updatedJob.jobPriority = this.tenantService.Tenant.jobPriorities.find(x => x.id == priority);
 
     this.jobService.UpdatePriorityAsync(updatedJob).subscribe(updated => {
-      // if (updated) {
-      //   this.Job.jobPriority = updatedJob.jobPriority;
-      //   console.log("updated job priority",this.Job);
-      //   this._snackBar.open(`Updated priority`, 'close', {duration: 1000});
-      // }
     });
+  }
+
+  UpdateModule(value: string) {
+
+  }
+
+  UpdateTitle(title: string) {
+    this.editingTitle = false;
+    if (this.Job.title != title) {
+      let updatedJob: Job = this.Job;
+      updatedJob.title = title;
+      this.jobService.UpdateJobAsync(updatedJob).subscribe();
+    }
+  }
+
+  UpdateDescription(description: string) {
+    this.editingDescription = false;
+    if (this.Job.description != description) {
+      let updatedJob: Job = this.Job;
+      updatedJob.description = description;
+      this.jobService.UpdateJobAsync(updatedJob).subscribe();
+    }
+  }
+
+
+  UpdateDeadline()
+  {
+    console.log(this.Job.deadline);
+    let updatedJob: Job = this.Job;
+    this.jobService.UpdateJobAsync(updatedJob).subscribe();
   }
 }

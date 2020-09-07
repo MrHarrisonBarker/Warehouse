@@ -3,11 +3,13 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 import {Tenant, CreateTenant, TenantViewModel} from "../Models/Tenant";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
-import {Job, JobPriority, JobStatus, JobType, NewPriority, NewStatus, NewType} from "../Models/Job";
+import {Job} from "../Models/Job";
 import {WINDOW} from "../window.providers";
 import {UserService} from "./user.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {newLineWithIndentation} from "tslint/lib/utils";
+import {JobStatus, NewStatus} from "../Models/JobStatus";
+import {JobPriority, NewPriority} from "../Models/JobPriority";
+import {JobType, NewType} from "../Models/JobType";
 
 export interface ITenantService
 {

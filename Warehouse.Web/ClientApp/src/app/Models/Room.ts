@@ -1,13 +1,12 @@
-import {User, UserId} from "./User";
+import {User} from "./User";
 import {Project} from "./Project";
+import {Chat} from "./Chat";
 
-export interface Chat
+export enum MessageType
 {
-  id?: string;
-  message: string;
-  timeStamp?: Date;
-  userId: string;
-  room: Room;
+  Message,
+  JobMention,
+  UserMention
 }
 
 export interface UserChat

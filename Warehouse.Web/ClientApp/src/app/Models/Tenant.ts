@@ -1,5 +1,7 @@
-import {JobPriority, JobStatus, JobType} from "./Job";
 import {User} from "./User";
+import {JobStatus} from "./JobStatus";
+import {JobPriority} from "./JobPriority";
+import {JobType} from "./JobType";
 
 export interface  Tenant
 {

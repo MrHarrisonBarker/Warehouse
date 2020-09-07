@@ -179,13 +179,6 @@ namespace Warehouse.Services
 
         public async Task<Job> UpdateJobAsync(Job updatedJob)
         {
-            var job = await _tenantDataContext.Jobs.FirstOrDefaultAsync(x => x.Id == updatedJob.Id);
-
-            if (job == null)
-            {
-                return null;
-            }
-
             _tenantDataContext.Update(updatedJob);
 
             try

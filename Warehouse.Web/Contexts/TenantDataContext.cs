@@ -17,6 +17,7 @@ namespace Warehouse.Contexts
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<UserId> UserIds { get; set; }
+        public DbSet<Module> Modules { get; set; }
 
         public DbSet<JobPriority> JobPriorities { get; set; }
         public DbSet<JobStatus> JobStatuses { get; set; }
@@ -61,6 +62,10 @@ namespace Warehouse.Contexts
                 .HasOne(pe => pe.User)
                 .WithMany(x => x.ProjectEmployments)
                 .HasForeignKey(pe => pe.UserId);
+
+            modelBuilder.Entity<Project>()
+                .HasMany(x => x.Modules)
+                .WithOne(x => x.Project);
 
             // Lists
 
@@ -123,6 +128,12 @@ namespace Warehouse.Contexts
             modelBuilder.Entity<JobPriority>().HasMany(x => x.Jobs).WithOne(x => x.JobPriority);
             modelBuilder.Entity<JobStatus>().HasMany(x => x.Jobs).WithOne(x => x.JobStatus);
             modelBuilder.Entity<JobType>().HasMany(x => x.Jobs).WithOne(x => x.JobType);
+            
+            //Modules
+
+            modelBuilder.Entity<Module>()
+                .HasMany(x => x.Jobs)
+                .WithOne(x => x.Module);
         }
     }
 }

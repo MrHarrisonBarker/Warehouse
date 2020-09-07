@@ -1,56 +1,10 @@
 import {List} from "./List";
 import {Project} from "./Project";
-import {User, UserId} from "./User";
-
-export interface JobStatus
-{
-  id: string;
-  name: string;
-  colour: string;
-  finished: boolean;
-  order: number;
-  user: User | null;
-}
-
-export interface NewStatus
-{
-  name: string;
-  order: number;
-  colour: string;
-  finished: boolean;
-}
-
-export interface JobPriority
-{
-  id: string;
-  name: string;
-  colour: string;
-  order: number;
-  user: User | null;
-}
-
-export interface NewPriority
-{
-  name: string;
-  order: number;
-  colour: string;
-}
-
-export interface JobType
-{
-  id: string;
-  name: string;
-  colour: string;
-  order: number;
-  user: User | null;
-}
-
-export interface NewType
-{
-  name: string;
-  order: number;
-  colour: string;
-}
+import {User} from "./User";
+import {JobStatus} from "./JobStatus";
+import {JobPriority} from "./JobPriority";
+import {JobType} from "./JobType";
+import {Module} from "./Module";
 
 export interface JobEmployment
 {
@@ -65,8 +19,8 @@ export interface Job
   link?: string;
   description: string;
   created?: Date;
-  deadline: Date;
-  finished?: Date;
+  deadline: Date | string;
+  finished?: Date | string;
   commit: string;
 
   jobStatus: JobStatus;
@@ -76,6 +30,7 @@ export interface Job
   list?: List;
   project?: Project;
   employments?: JobEmployment[];
+  module?: Module;
 }
 
 export interface NewJob

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Warehouse.Contexts;
 
 namespace Warehouse.Migrations.TenantData
 {
     [DbContext(typeof(TenantDataContext))]
-    partial class TenantDataContextModelSnapshot : ModelSnapshot
+    [Migration("20200907014232_modules")]
+    partial class modules
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -295,12 +297,7 @@ namespace Warehouse.Migrations.TenantData
                     b.Property<string>("Name")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<Guid?>("ProjectId")
-                        .HasColumnType("char(36)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ProjectId");
 
                     b.ToTable("Modules");
                 });
@@ -472,13 +469,6 @@ namespace Warehouse.Migrations.TenantData
                 {
                     b.HasOne("Warehouse.Models.Project", "Project")
                         .WithMany("Lists")
-                        .HasForeignKey("ProjectId");
-                });
-
-            modelBuilder.Entity("Warehouse.Models.Module", b =>
-                {
-                    b.HasOne("Warehouse.Models.Project", "Project")
-                        .WithMany("Modules")
                         .HasForeignKey("ProjectId");
                 });
 

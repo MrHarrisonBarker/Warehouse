@@ -1,0 +1,10 @@
+<div class="d-flex h-100">
+  <app-project-nav></app-project-nav>
+
+  <div class="d-flex flex-column w-100">
+    <div class="d-flex flex-row justify-content-between px-3" *ngFor="let module of moduleService.Modules">
+      <div>{{module.name}}</div>
+      <div>{{module.jobCount}} Jobs</div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ChatService} from "../../Services/chat.service";
-import {Chat, Room} from "../../Models/Room";
+import {Room} from "../../Models/Room";
 import {AuthService} from "../../Services/auth.service";
 import {User} from "../../Models/User";
 import {FormControl} from "@angular/forms";
@@ -13,6 +13,7 @@ import {JobService} from "../../Services/job.service";
 import {ProjectService} from "../../Services/project.service";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
+import {Chat} from "../../Models/Chat";
 
 @Component({
   selector: 'app-rooms',
@@ -149,7 +150,7 @@ export class RoomsComponent implements OnInit, OnDestroy {
   }
 
   mentionJob(job: Job, selectionStart: number) {
-    console.log(selectionStart);
+    // console.log(selectionStart);
     while (selectionStart > -1) {
       if (this.message[selectionStart] == "#") {
         let jobMention = "#" + job.id;

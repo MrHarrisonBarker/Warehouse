@@ -31,6 +31,9 @@ namespace Warehouse.Models
         
         // // many to many users
         public IList<ProjectEmployment> Employments { get; set; }
+        
+        //many to one module
+        public IList<Module> Modules { get; set; }
     }
 
     public class NewProject
@@ -65,5 +68,7 @@ namespace Warehouse.Models
         
         // // many to many users
         public IList<ProjectEmployment> Employments { get; set; }
+        
+        public IList<Module> Modules { get; set; }
     }
 }

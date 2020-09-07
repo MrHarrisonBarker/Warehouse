@@ -66,4 +66,9 @@ export class ProjectNavComponent implements OnInit
   {
     this.extended = !this.extended;
   }
+
+  NavigateToModules()
+  {
+    this.router.navigateByUrl(`/project/${this.projectService.currentProjectId}/modules`);
+  }
 }

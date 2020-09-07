@@ -42,6 +42,7 @@ namespace Warehouse
                         var dbContext = new TenantDataContext(optionsBuilder.Options);
                         TenantDataContextSeed.SeedAsync(dbContext, new CreateTenant()
                         {
+                            UserId = Guid.Parse("08d84f75-8698-4cf5-82a3-094415fcd132"),
                             Tenant = tenant
                         }).Wait();
                     }

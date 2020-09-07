@@ -17,6 +17,9 @@ namespace Warehouse.Models
         public string AssociatedUrl { get; set; }
         public string Commit { get; set; }
 
+        // many to one Module
+        public Module Module { get; set; }
+        
         // many to one list
         public List List { get; set; }
         
@@ -47,9 +50,12 @@ namespace Warehouse.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime Created { get; set; }
+        public DateTime Finished { get; set; }
         public DateTime Deadline { get; set; }
         public string AssociatedUrl { get; set; }
         public string Commit { get; set; }
+        
+        public Module Module { get; set; }
         
         // many to many users
         public IList<JobEmployment> Employments { get; set; }

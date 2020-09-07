@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TenantService} from "../../../Services/tenant.service";
-import {JobStatus} from "../../../Models/Job";
+import {JobStatus} from "../../../Models/JobStatus";
 
 @Component({
   selector: 'app-status-config',

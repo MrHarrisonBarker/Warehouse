@@ -22,9 +22,17 @@ namespace Warehouse.Models
     {
         public Guid Id { get; set; }
         public string Message { get; set; }
+        public MessageType Type { get; set; }
         public DateTime TimeStamp { get; set; }
         public Guid UserId { get; set; }
         public Room Room { get; set; }
+    }
+
+    public enum MessageType
+    {
+        Message,
+        JobMention,
+        UserMention
     }
 
     public class NewRoom

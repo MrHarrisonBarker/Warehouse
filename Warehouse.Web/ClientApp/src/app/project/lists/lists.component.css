@@ -77,3 +77,10 @@ label {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+#listAndPreview {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100%;
+  overflow: auto;
+}

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Chat, UserChat} from "../../../Models/Room";
+import {UserChat} from "../../../Models/Room";
 import {User} from "../../../Models/User";
 import {AuthService} from "../../../Services/auth.service";
 import {UserService} from "../../../Services/user.service";
@@ -8,6 +8,7 @@ import {NewJobComponent} from "../../job/new-job/new-job.component";
 import {JobComponent} from "../../job/job.component";
 import {MatDialog} from "@angular/material/dialog";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+import {Chat} from "../../../Models/Chat";
 
 enum MessageType
 {
@@ -153,7 +154,7 @@ export class ChatComponent implements OnInit {
 
   public JobMentionClicked(jobId: string) {
     console.log(jobId);
-    // this.dialog.open(JobComponent)
+    this.dialog.open(JobComponent)
   }
 
 

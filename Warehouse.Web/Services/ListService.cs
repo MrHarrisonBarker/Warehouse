@@ -53,23 +53,28 @@ namespace Warehouse.Services
                         AssociatedUrl = job.AssociatedUrl,
                         Title = job.Title,
                         Employments = job.Employments,
+                        Finished = job.Finished,
+                        Module = job.Module,
                         JobPriority = new JobPriorityViewModel()
                         {
                             Id = job.JobPriority.Id,
                             Name = job.JobPriority.Name,
-                            Colour = job.JobPriority.Colour
+                            Colour = job.JobPriority.Colour,
+                            Order = job.JobPriority.Order
                         },
                         JobType = new JobTypeViewModel()
                         {
                             Id = job.JobType.Id,
                             Name = job.JobType.Name,
-                            Colour = job.JobType.Colour
+                            Colour = job.JobType.Colour,
+                            Order = job.JobType.Order
                         },
                         JobStatus = new JobStatusViewModel()
                         {
                             Id = job.JobStatus.Id,
                             Name = job.JobStatus.Name,
-                            Colour = job.JobStatus.Colour
+                            Colour = job.JobStatus.Colour,
+                            Order = job.JobStatus.Order
                         }
                     }).ToList()
                 })
@@ -98,23 +103,28 @@ namespace Warehouse.Services
                     AssociatedUrl = job.AssociatedUrl,
                     Title = job.Title,
                     Employments = job.Employments,
+                    Finished = job.Finished,
+                    Module = job.Module,
                     JobPriority = new JobPriorityViewModel()
                     {
                         Id = job.JobPriority.Id,
                         Name = job.JobPriority.Name,
-                        Colour = job.JobPriority.Colour
+                        Colour = job.JobPriority.Colour,
+                        Order = job.JobPriority.Order
                     },
                     JobType = new JobTypeViewModel()
                     {
                         Id = job.JobType.Id,
                         Name = job.JobType.Name,
-                        Colour = job.JobType.Colour
+                        Colour = job.JobType.Colour,
+                        Order = job.JobType.Order
                     },
                     JobStatus = new JobStatusViewModel()
                     {
                         Id = job.JobStatus.Id,
                         Name = job.JobStatus.Name,
-                        Colour = job.JobStatus.Colour
+                        Colour = job.JobStatus.Colour,
+                        Order = job.JobStatus.Order
                     }
                 }).ToList()
             }).FirstOrDefaultAsync(x => x.Id == id);

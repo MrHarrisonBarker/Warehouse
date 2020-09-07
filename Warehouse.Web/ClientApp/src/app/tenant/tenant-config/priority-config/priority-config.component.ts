@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TenantService} from "../../../Services/tenant.service";
-import {JobPriority} from "../../../Models/Job";
+import {JobPriority} from "../../../Models/JobPriority";
 
 @Component({
   selector: 'app-priority-config',

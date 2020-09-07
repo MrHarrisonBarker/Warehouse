@@ -3,6 +3,7 @@ import {Job} from "./Job";
 import {List} from "./List";
 import {Event} from "./Event";
 import {Room} from "./Room";
+import {Module} from "./Module";
 
 export interface projectEmployment
 {
@@ -28,6 +29,7 @@ export interface Project
   lists?: List[];
   jobs?: Job[];
   employments?: projectEmployment[];
+  modules?: Module[];
   // employments?: projectEmployment[] | UserId[];
 }
 
@@ -48,6 +50,7 @@ export interface ProjectViewModel
   lists: string[];
   employments: string[];
   jobs: string[];
+  modules?: Module[];
 }
 
 export interface NewProject

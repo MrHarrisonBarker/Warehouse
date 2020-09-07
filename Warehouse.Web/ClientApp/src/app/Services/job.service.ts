@@ -14,6 +14,8 @@ export interface IJobService
   UpdatePriorityAsync(updatedJob: Job): Observable<boolean>;
   UpdateTypeAsync(updatedJob: Job): Observable<boolean>;
 
+  UpdateJobAsync(updatedJob: Job): Observable<boolean>
+
   MergeJobs(job: Job[]): void
 }
 
@@ -100,5 +102,22 @@ export class JobService implements IJobService
 
   GetJobs(): Job[] {
     return this.Jobs;
+  }
+
+  public UpdateJobAsync(updatedJob: Job): Observable<boolean>
+  {
+    if (updatedJob.deadline == '') {
+      updatedJob.deadline = new Date('');
+    }
+    return this.http.put<boolean>(this.BaseUrl + 'api/job',updatedJob).pipe(map(updated => {
+      if (updated) {
+        // updatedJob.deadline = updatedJob.deadline == '1970-01-01T00:00:00' ? '' : updatedJob.deadline;
+        // this.Jobs[this.Jobs.findIndex(x => x.id == updatedJob.id)] = updatedJob;
+        this._snackBar.open(`Updated job"`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to updated job`,'close',{duration:1000});
+      }
+      return updated;
+    }));
   }
 }

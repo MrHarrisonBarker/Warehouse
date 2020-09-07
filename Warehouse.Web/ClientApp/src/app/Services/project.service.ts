@@ -66,7 +66,8 @@ export class ProjectService implements IProjectService {
           lists: project.lists.map(list => list.id),
           name: project.name,
           repo: project.repo,
-          rooms: project.rooms
+          rooms: project.rooms,
+          modules: project.modules
         };
 
         if (index == -1) {
@@ -89,7 +90,7 @@ export class ProjectService implements IProjectService {
       this.jobService.MergeJobs(project.jobs);
 
       let index = this.Projects.findIndex(x => x.id == project.id);
-      let newProject = {
+      let newProject: ProjectViewModel = {
         short: project.short,
         employments: project.employments != null ? project.employments.map(employment => employment.userId) : [],
         accent: project.accent,
@@ -102,7 +103,8 @@ export class ProjectService implements IProjectService {
         lists: project.lists != null ? project.lists.map(list => list.id): [],
         name: project.name,
         repo: project.repo,
-        rooms: project.rooms
+        rooms: project.rooms,
+        modules: project.modules
       };
 
       if (index == -1) {
@@ -132,7 +134,8 @@ export class ProjectService implements IProjectService {
           lists: project.lists != null ? project.lists.map(list => list.id): [] ,
           name: project.name,
           repo: project.repo,
-          rooms: project.rooms
+          rooms: project.rooms,
+          modules: project.modules
         });
         this._snackBar.open(`Created ${newProject.project.name}`,'close',{duration:1000});
       } else {

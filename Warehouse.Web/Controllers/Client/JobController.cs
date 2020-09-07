@@ -162,6 +162,24 @@ namespace Warehouse.Controllers.Client
             
             return BadRequest("Tenant doesn't exist");
         }
+        
+        [HttpPut]
+        public async Task<ActionResult<Job>> Update([FromBody] Job updatedJob)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"updating jobs priority for {tenant.Id} : {tenant.Name}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobService = new JobService(context);
+                    return Ok(await jobService.UpdateJobAsync(updatedJob));
+                }
+            }
+            
+            return BadRequest("Tenant doesn't exist");
+        }
     }
 
     public class AddJobUser

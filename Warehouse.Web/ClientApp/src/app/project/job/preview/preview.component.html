@@ -1,20 +1,36 @@
-<div class="d-flex flex-row h-100" *ngIf="Job">
+<div class="h-100" id="preview" *ngIf="Job">
   <div id="jobDetails">
-    <div class="greyText mat-body-strong">Details</div>
+    <div class="greyText mat-title">Details</div>
+
     <div>
       <div>Created</div>
       <div class="mat-body">{{Job.created | date:'short'}}</div>
     </div>
-    <div>
+
+    <div *ngIf="Job.finished == '0001-01-01T00:00:00'">
       <div>Deadline</div>
-      <div class="mat-body">{{Job.deadline | date:'short'}}</div>
+      <!--      <div class="mat-body">{{Job.deadline | date:'short'}}</div>-->
+      <div class="flex-row d-flex">
+        <input class="flex-grow-1" [matDatepicker]="picker" [(ngModel)]="this.Job.deadline" [min]="now"/>
+        <button mat-icon-button (click)="picker.open()">
+          <mat-icon>event</mat-icon>
+        </button>
+      </div>
+
+      <mat-datepicker #picker (closed)="UpdateDeadline()"></mat-datepicker>
     </div>
+
+    <div *ngIf="Job.finished != '0001-01-01T00:00:00'">
+      <div>Finished</div>
+      <div class="mat-body">{{Job.finished | date:'short'}}</div>
+    </div>
+
     <div>
       <div>Status</div>
       <div class="d-flex flex-row align-items-center">
-        <div [style.background]="tenantService.GetJobStatus(Job).colour" class="blip mr-1"></div>
-        <label>
-          <select [value]="Job.jobStatus.id" #status (change)="UpdateStatus(status.value)">
+        <div [style.background]="tenantService.GetJobStatus(Job).colour" class="blip my-auto mr-1"></div>
+        <label style="margin: auto;width: 100%;">
+          <select [value]="Job.jobStatus.id" #status (change)="UpdateStatus(status.value)" class="w-100">
             <option *ngFor="let status of tenantService.Tenant.jobStatuses" [value]="status.id">
               {{status.name}}
             </option>
@@ -22,12 +38,13 @@
         </label>
       </div>
     </div>
+
     <div>
       <div>Type</div>
       <div class="d-flex flex-row align-items-center">
-        <div [style.background]="tenantService.GetJobType(Job).colour" class="blip mr-1"></div>
-        <label>
-          <select [value]="Job.jobType.id" #type (change)="UpdateType(type.value)">
+        <div [style.background]="tenantService.GetJobType(Job).colour" class="blip my-auto  mr-1"></div>
+        <label style="margin: auto;width: 100%;">
+          <select [value]="Job.jobType.id" #type (change)="UpdateType(type.value)" class="w-100">
             <option *ngFor="let type of tenantService.Tenant.jobTypes" [value]="type.id">
               {{type.name}}
             </option>
@@ -35,14 +52,28 @@
         </label>
       </div>
     </div>
+
     <div>
       <div>Priority</div>
       <div class="d-flex flex-row align-items-center">
-        <div [style.background]="tenantService.GetJobPriority(Job).colour" class="blip mr-1"></div>
-        <label>
-          <select [value]="Job.jobPriority.id" #priority (change)="UpdatePriority(priority.value)">
+        <div [style.background]="tenantService.GetJobPriority(Job).colour" class="blip my-auto mr-1"></div>
+        <label style="margin: auto;width: 100%;">
+          <select [value]="Job.jobPriority.id" #priority (change)="UpdatePriority(priority.value)" class="w-100">
             <option *ngFor="let priority of tenantService.Tenant.jobPriorities" [value]="priority.id">
               {{priority.name}}
+            </option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <div>Module</div>
+      <div class="d-flex flex-row align-items-center">
+        <label style="margin: auto;width: 100%;">
+          <select [value]="Job.module.id" #module (change)="UpdateModule(module.value)" class="w-100">
+            <option *ngFor="let module of projectService.GetCurrentProject().modules" [value]="module.id">
+              {{module.name}}
             </option>
           </select>
         </label>
@@ -51,10 +82,22 @@
   </div>
 
   <div id="job">
-    <div class="greyText">{{Job.link}}</div>
-    <div class="mat-display-1">{{Job.title}}</div>
-    <a *ngIf="Job.commit" [href]="projectService.GetCurrentProject().repo + '/commit/' + Job.commit" target="_blank">{{Job.commit.substr(0,7)}}</a>
-    <div>{{Job.description}}</div>
+    <div class="greyText" style="padding-left: 0.5rem;">{{Job.link}}</div>
+    <div>
+      <div class="mat-display-1" id="title" *ngIf="!editingTitle" (click)="editingTitle = true">{{Job.title}}</div>
+      <input id="jobTitleEdit" *ngIf="editingTitle" type="text" [value]="Job.title" #Title
+             (focusout)="UpdateTitle(Title.value)">
+    </div>
+
+    <a *ngIf="Job.commit" style="padding-left: 0.5rem;"
+       [href]="projectService.GetCurrentProject().repo + '/commit/' + Job.commit"
+       target="_blank">{{Job.commit.substr(0, 7)}}</a>
+
+    <div>
+      <div id="description" *ngIf="!editingDescription" (click)="editingDescription = true">{{Job.description}}</div>
+      <textarea [value]="Job.description" *ngIf="editingDescription" #Description
+                (focusout)="UpdateDescription(Description.value)" id="descriptionEdit"></textarea>
+    </div>
   </div>
 
   <div id="avatars">

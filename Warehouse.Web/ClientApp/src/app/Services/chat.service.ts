@@ -1,11 +1,12 @@
 import {EventEmitter, Inject, Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Chat, Room, UserChat} from "../Models/Room";
+import {Room, UserChat} from "../Models/Room";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {List} from "../Models/List";
 import {HttpTransportType, HubConnection, HubConnectionBuilder, LogLevel} from "@aspnet/signalr";
 import {AuthService} from "./auth.service";
+import {Chat} from "../Models/Chat";
 
 @Injectable({
   providedIn: 'root'
