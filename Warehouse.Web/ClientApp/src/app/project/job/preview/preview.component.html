@@ -101,6 +101,7 @@
   </div>
 
   <div id="avatars">
-    <avatar [User]="user" *ngFor="let user of GetUsers(Job)"></avatar>
+    <avatar [jobId]="Job.id" [User]="user" *ngFor="let user of GetUsers(Job)"></avatar>
+    <div id="addUser" (click)="AddUser()"></div>
   </div>
 </div>

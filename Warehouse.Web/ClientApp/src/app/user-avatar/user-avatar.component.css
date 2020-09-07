@@ -19,3 +19,13 @@ img {
   text-align: center;
   color: white;
 }
+
+#removeUser{
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5.25px;
+  right: 5.25px;
+}

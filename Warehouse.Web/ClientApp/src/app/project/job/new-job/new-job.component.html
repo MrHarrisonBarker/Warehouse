@@ -31,12 +31,13 @@
 
   <mat-form-field style="width: 100%" appearance="outline">
     <mat-label>Employments</mat-label>
-    <input type="text" placeholder="Jon Doe" aria-label="Number" matInput [matAutocomplete]="auto" [(ngModel)]="selectedUser" (keyup.enter)="AddUser()">
+    <input type="text" placeholder="Jon Doe" aria-label="Number" matInput [matAutocomplete]="auto"
+           [(ngModel)]="selectedUser" (keyup.enter)="AddUser()">
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
       <mat-option *ngFor="let option of userBank" [value]="option.displayName">
         <div class="d-flex">
-          <div>{{option.displayName}}</div>
-          <img [src]="option.avatar" width="40px" height="40px" style="border-radius: 50%">
+          <div class="mr-2">{{option.displayName}}</div>
+          <img class="my-auto" [src]="option.avatar" width="40px" height="40px" style="border-radius: 50%">
         </div>
       </mat-option>
     </mat-autocomplete>
@@ -44,7 +45,12 @@
 
   </mat-form-field>
 
-  <div class="d-flex flex-row" id="colleagues"><img *ngFor="let user of selectedUsers" [src]="user.avatar" width="40px" height="40px" style="border-radius: 50%"></div>
+  <div class="d-flex flex-row" id="colleagues">
+    <div *ngFor="let user of selectedUsers" class="container-img mr-2" (mouseenter)="hover = true" (mouseleave)="hover = false">
+      <img  [src]="user.avatar" width="40px" height="40px" style="border-radius: 50%">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABYklEQVR4Ae3XIWzCQBiG4YmKikq8mg8+OHwqEMjJyfNBICqQ+CCRFQi8QiAQlRMIBKISOVHx7xUTyyWXL/l3NRtv8jhCvpTrJbw8+y9N0eCAM27fTmixwitGrUTAHQZIH3hDgazVuMKcOsyQpQaWwYB3uCvQwjLbwtUGNgrHk1rCRjRgBtJV6MUBNU1+tkMB2Rrq99/ChKDPIVeCqMQDFsMRRHpUiF6OLnlPiebid1+oUQj4WYAliRt9B3OM8o0BVkh2gflGOcYALZLdYZ5RrjHACclMi0eJMdrNMUi8TeKgC3ck691j/KPOSNY5xwQsnKMOSLZ3jRFXgtAgWe0bA/+oKZJV+NSPNh4jR3XyQDsPZIjH6FHq+3QTPMQhNAUDjrCEK0roKMBGVkOn37gsGu//sBMssxbuysxPaoMCvy6Ig670WCJrE2yje0p5YI0Ko1Whxh4d+uiiu2CHOUo8+9t9AUcCWfVf/Xv1AAAAAElFTkSuQmCC" id="removeUser" (click)="RemoveUser(user)">
+    </div>
+  </div>
 
   <mat-form-field appearance="outline" class="mr-3">
     <mat-label>Type</mat-label>
@@ -56,14 +62,16 @@
   <mat-form-field appearance="outline" class="mr-3">
     <mat-label>Status</mat-label>
     <mat-select #Status>
-      <mat-option *ngFor="let status of tenantService.Tenant.jobStatuses" [value]="status.name">{{status.name}}</mat-option>
+      <mat-option *ngFor="let status of tenantService.Tenant.jobStatuses"
+                  [value]="status.name">{{status.name}}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="mr-3">
     <mat-label>Priority</mat-label>
     <mat-select #Priority>
-      <mat-option *ngFor="let priority of tenantService.Tenant.jobPriorities" [value]="priority.name">{{priority.name}}</mat-option>
+      <mat-option *ngFor="let priority of tenantService.Tenant.jobPriorities"
+                  [value]="priority.name">{{priority.name}}</mat-option>
     </mat-select>
   </mat-form-field>
 
@@ -71,6 +79,8 @@
 
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="newJob(Title.value,Description.value,AssociatedUrl.value,Commit.value,Type.value,Status.value,Priority.value)">New
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial
+          (click)="newJob(Title.value,Description.value,AssociatedUrl.value,Commit.value,Type.value,Status.value,Priority.value)">
+    New
   </button>
 </mat-dialog-actions>

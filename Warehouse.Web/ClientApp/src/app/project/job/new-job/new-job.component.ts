@@ -32,6 +32,7 @@ export class NewJobComponent implements OnInit
   selectedUsers: User[] = [];
   userBank: User[] = [];
   DeadlineDate: Date;
+  hover: boolean;
 
   constructor (
     public tenantService: TenantService,
@@ -76,5 +77,11 @@ export class NewJobComponent implements OnInit
     this.jobService.CreateJobAsync(newJob).subscribe(job => {
       console.log(job);
     })
+  }
+
+  RemoveUser(user: User)
+  {
+    this.userBank.push(user);
+    this.selectedUsers = this.selectedUsers.filter(x => x.id != user.id);
   }
 }

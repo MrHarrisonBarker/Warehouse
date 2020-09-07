@@ -5,3 +5,19 @@
   border-radius: 0.5rem;
   height: 56px;
 }
+
+#removeUser{
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  right: 1.5px;
+}
+
+.container-img {
+  position: relative;
+  text-align: center;
+  color: white;
+}

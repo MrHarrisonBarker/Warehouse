@@ -6,6 +6,8 @@ import {JobService} from "../../../Services/job.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {UserService} from "../../../Services/user.service";
 import {ProjectService} from "../../../Services/project.service";
+import {MatDialog} from "@angular/material/dialog";
+import {AddJobWorkerComponent} from "../add-job-worker/add-job-worker.component";
 
 @Component({
   selector: 'job-preview',
@@ -23,9 +25,9 @@ export class PreviewComponent implements OnInit, OnChanges
   constructor(
     public tenantService: TenantService,
     private jobService: JobService,
-    private _snackBar: MatSnackBar,
     private userService: UserService,
-    public projectService: ProjectService) {
+    public projectService: ProjectService,
+    public dialog: MatDialog) {
   }
 
   ngOnChanges(changes: SimpleChanges): void
@@ -97,5 +99,10 @@ export class PreviewComponent implements OnInit, OnChanges
     console.log(this.Job.deadline);
     let updatedJob: Job = this.Job;
     this.jobService.UpdateJobAsync(updatedJob).subscribe();
+  }
+
+  AddUser()
+  {
+    this.dialog.open(AddJobWorkerComponent,{data:this.Job});
   }
 }

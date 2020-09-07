@@ -23,49 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3101d830-054e-4167-96ef-8b84e111b046" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Chat.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/JobPriority.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/JobStatus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/JobType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/ModuleController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Module.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Web/Services/ModuleService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Project.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Room.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Room.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Tenant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Tenant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/chat.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/chat.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/job.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/job.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/project.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project-nav/project-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project-nav/project-nav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project-nav/project-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project-nav/project-nav.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/priority-config/priority-config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/priority-config/priority-config.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/status-config/status-config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/status-config/status-config.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/type-config/type-config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/type-config/type-config.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContextSeed.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/JobController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/JobController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Migrations/TenantData/TenantDataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Migrations/TenantData/TenantDataContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/Job.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/Job.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Project.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/JobService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/JobService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/ListService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/ListService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/ProjectService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Warehouse.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Warehouse.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,16 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.css" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/styles.css" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.css" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/chat.service.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.html" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Room.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Room.ts" />
@@ -111,7 +75,6 @@
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/JobType.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project-nav/project-nav.component.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project-nav/project-nav.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/modules/modules.component.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContext.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Startup.cs" />
@@ -124,26 +87,37 @@
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/module.service.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/modules/modules.component.html" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Project.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.css" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/JobController.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Services/JobService.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/Job.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/project.service.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Project.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.html" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.css" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/job.service.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Services/ProjectService.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Services/ListService.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContextSeed.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project.module.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/shared.module.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/index.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/project.module.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/Job.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/add-job-worker/add-job-worker.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/user-avatar/user-avatar.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/job.service.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/add-job-worker/add-job-worker.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.css" />
       </list>
     </option>
   </component>
@@ -208,7 +182,7 @@
       <workItem from="1599193442825" duration="5347000" />
       <workItem from="1599199904984" duration="23870000" />
       <workItem from="1599242064797" duration="7024000" />
-      <workItem from="1599403415862" duration="36947000" />
+      <workItem from="1599403415862" duration="42362000" />
     </task>
     <servers />
   </component>
@@ -396,10 +370,10 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="560" y="265" key="run.anything.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599287502643" />
-    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup" timestamp="1599451191580">
+    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup" timestamp="1599467723325">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599443822243" />
+    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599467723325" />
     <state x="559" y="266" width="672" height="678" key="search.everywhere.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1599451191580" />
   </component>
 </project>

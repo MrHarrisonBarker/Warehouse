@@ -42,6 +42,8 @@ export class TenantService implements ITenantService
   private readonly BaseUrl: string;
   public Tenant: TenantViewModel;
 
+  favIcon: HTMLLinkElement = document.querySelector('#appIcon');
+
   constructor (@Inject(WINDOW) private window: Window,private _snackBar: MatSnackBar, private http: HttpClient, @Inject('BASE_URL') baseUrl: string,private userService:UserService)
   {
     this.BaseUrl = baseUrl;
@@ -66,6 +68,9 @@ export class TenantService implements ITenantService
         jobTypes: tenant.jobTypes,
         name: tenant.name
       }
+
+      this.favIcon.href = tenant.avatar;
+
       return this.Tenant;
     }));
   }

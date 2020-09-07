@@ -261,6 +261,11 @@
                   </e>
                 </e>
                 <e p="Job" t="Include">
+                  <e p="add-job-worker" t="Include">
+                    <e p="add-job-worker.component.css" t="Include" />
+                    <e p="add-job-worker.component.html" t="Include" />
+                    <e p="add-job-worker.component.ts" t="Include" />
+                  </e>
                   <e p="job.component.css" t="Include" />
                   <e p="job.component.html" t="Include" />
                   <e p="job.component.ts" t="Include" />

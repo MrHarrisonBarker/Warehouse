@@ -1,6 +1,6 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Job, NewJob} from "../Models/Job";
+import {AddJobUser, Job, NewJob} from "../Models/Job";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {MatSnackBar} from "@angular/material/snack-bar";
@@ -9,6 +9,9 @@ export interface IJobService
 {
   GetJobs(): Job[]
   CreateJobAsync(newJob: NewJob): Observable<Job>;
+
+  AddUserAsync(userId: string, jobId:string): Observable<boolean>
+  RemoveUserAsync(userid: string, jobId: string): Observable<boolean>
 
   UpdateStatusAsync(updatedJob: Job): Observable<boolean>;
   UpdatePriorityAsync(updatedJob: Job): Observable<boolean>;
@@ -118,6 +121,44 @@ export class JobService implements IJobService
         this._snackBar.open(`Failed to updated job`,'close',{duration:1000});
       }
       return updated;
+    }));
+  }
+
+  public AddUserAsync(userId: string, jobId:string): Observable<boolean>
+  {
+
+    let addUser: AddJobUser = {
+      jobId: jobId,
+      userId: userId
+    }
+
+    return this.http.post<boolean>(this.BaseUrl + 'api/job/adduser', addUser).pipe(map(added => {
+      if (added) {
+        this.Jobs[this.Jobs.findIndex(x => x.id == jobId)].employments.push({userId:userId,jobId:jobId});
+        this._snackBar.open(`Added user to job"`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to add user to job`,'close',{duration:1000});
+      }
+      return added;
+    }));
+  }
+
+  public RemoveUserAsync(userId: string, jobId: string): Observable<boolean>
+  {
+    let addUser: AddJobUser = {
+      jobId: jobId,
+      userId: userId
+    }
+
+    return this.http.post<boolean>(this.BaseUrl + 'api/job/removeuser', addUser).pipe(map(removed => {
+      if (removed) {
+        let index = this.Jobs.findIndex(x => x.id == jobId);
+        this.Jobs[index].employments = this.Jobs[index].employments.filter(x => x.userId != userId);
+        this._snackBar.open(`Removed user from job"`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to remove user from job`,'close',{duration:1000});
+      }
+      return removed;
     }));
   }
 }

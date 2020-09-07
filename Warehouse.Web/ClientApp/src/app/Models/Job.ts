@@ -46,3 +46,9 @@ export interface JobByStatus
   statusId: string;
   jobs: Job[];
 }
+
+export interface AddJobUser
+{
+  userId: string;
+  jobId: string;
+}

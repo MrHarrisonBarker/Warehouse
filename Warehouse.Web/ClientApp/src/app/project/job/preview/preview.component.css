@@ -60,3 +60,30 @@
   border: 1px solid rgba(12, 12, 13, 0.2);
   background-color: #EBECEF;
 }
+
+#addUser {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #7f8b95;
+  box-shadow: 0 0 2px #47454582;
+  cursor: pointer;
+}
+
+#addUser:hover {
+  background: #959ea5;
+}
+
+#addUser::before {
+  content: "+";
+  height: 60px;
+  width: 60px;
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: courier;
+  color: #eeeeee;
+}
