@@ -61,6 +61,7 @@ export class NewJobComponent implements OnInit
         title: title,
         description: description,
         deadline: this.DeadlineDate,
+        commit: commit,
         jobStatus: this.tenantService.Tenant.jobStatuses.find(x => x.name == status),
         jobPriority: this.tenantService.Tenant.jobPriorities.find(x => x.name == priority),
         jobType: this.tenantService.Tenant.jobTypes.find(x => x.name == type),

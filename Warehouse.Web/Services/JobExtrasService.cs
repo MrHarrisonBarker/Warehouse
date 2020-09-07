@@ -12,12 +12,18 @@ namespace Warehouse.Services
         Task<IList<JobStatus>> GetAllJobStatues();
         Task<IList<JobPriority>> GetAllJobPriorities();
         Task<IList<JobType>> GetAllJobTypes();
+        
         Task<JobStatus> CreateJobStatus(NewStatus newStatus);
-        Task<bool> DeleteJobStatus(JobStatus jobStatus);
+        Task<bool> UpdateJobStatus(JobStatus jobStatus);
+        Task<bool> DeleteJobStatus(Guid statusId);
+        
         Task<JobType> CreateJobType(NewType newType);
-        Task<bool> DeleteJobType(JobType jobType);
+        Task<bool> UpdateJobType(JobType jobType);
+        Task<bool> DeleteJobType(Guid typeId);
+        
         Task<JobPriority> CreateJobPriority(NewPriority newPriority);
-        Task<bool> DeleteJobPriority(JobPriority jobPriority);
+        Task<bool> UpdateJobPriority(JobPriority jobPriority);
+        Task<bool> DeleteJobPriority(Guid priorityId);
     }
     
     public class JobExtrasService : IJobExtrasService
@@ -57,6 +63,8 @@ namespace Warehouse.Services
             var jobStatus = new JobStatus()
             {
                 Name = newStatus.Name,
+                Finished = newStatus.Finished,
+                Order = newStatus.Order,
                 Colour = newStatus.Colour
             };
             await _tenantDataContext.JobStatuses.AddAsync(jobStatus);
@@ -73,9 +81,44 @@ namespace Warehouse.Services
             }
         }
 
-        public async Task<bool> DeleteJobStatus(JobStatus jobStatus)
+        public async Task<bool> UpdateJobStatus(JobStatus jobStatus)
         {
-            throw new System.NotImplementedException();
+            _tenantDataContext.JobStatuses.Update(jobStatus);
+            
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteJobStatus(Guid statusId)
+        {
+            var jobStatus = await _tenantDataContext.JobStatuses.FirstOrDefaultAsync(x => x.Id == statusId);
+
+            if (jobStatus == null)
+            {
+                Console.WriteLine("Job status doesnt exist");
+                return false;
+            }
+
+            _tenantDataContext.JobStatuses.Remove(jobStatus);
+            
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
 
         public async Task<JobType> CreateJobType(NewType newType)
@@ -107,9 +150,44 @@ namespace Warehouse.Services
             }
         }
 
-        public async Task<bool> DeleteJobType(JobType jobType)
+        public async Task<bool> UpdateJobType(JobType jobType)
         {
-            throw new System.NotImplementedException();
+            _tenantDataContext.JobTypes.Update(jobType);
+            
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteJobType(Guid typeId)
+        {
+            var jobType = await _tenantDataContext.JobTypes.FirstOrDefaultAsync(x => x.Id == typeId);
+
+            if (jobType == null)
+            {
+                Console.WriteLine("Job type doesnt exist");
+                return false;
+            }
+
+            _tenantDataContext.JobTypes.Remove(jobType);
+            
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
 
         public async Task<JobPriority> CreateJobPriority(NewPriority newPriority)
@@ -141,9 +219,44 @@ namespace Warehouse.Services
             }
         }
 
-        public async Task<bool> DeleteJobPriority(JobPriority jobPriority)
+        public async Task<bool> UpdateJobPriority(JobPriority jobPriority)
         {
-            throw new System.NotImplementedException();
+            _tenantDataContext.JobPriorities.Update(jobPriority);
+            
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteJobPriority(Guid priorityId)
+        {
+            var jobPriority = await _tenantDataContext.JobPriorities.FirstOrDefaultAsync(x => x.Id == priorityId);
+
+            if (jobPriority == null)
+            {
+                Console.WriteLine("Job priority doesnt exist");
+                return false;
+            }
+
+            _tenantDataContext.JobPriorities.Remove(jobPriority);
+            
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
     }
 }

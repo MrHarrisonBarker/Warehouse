@@ -3,6 +3,7 @@
   <tenant-nav></tenant-nav>
 
   <div class="w-100 d-flex flex-column" style="max-height: 100vh;" *ngIf="!Loading">
+    <div class="w-100" style="height: 10px" [style.background-color]="tenantService.Tenant.accent"></div>
     <div class="d-flex p-3 flex-row justify-content-between" id="tenantDetails">
       <div class="d-flex flex-row">
         <img id="tenantAvatar" width="60px" height="60px" [src]="tenantService.Tenant.avatar">

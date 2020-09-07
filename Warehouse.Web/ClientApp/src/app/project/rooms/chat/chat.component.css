@@ -3,3 +3,11 @@ img {
   height: 40px;
   border-radius: 25%;
 }
+
+.chatText {
+  width: 100%;
+}
+
+.chatText:hover {
+  background-color: aliceblue;
+}

@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace Warehouse.Test.Services.JobService.Tests
 {
-    public class JobServiceUpdateJobAsync
+    public class UpdateJobAsync
     {
         [TestFixture]
         public class UpdateJob

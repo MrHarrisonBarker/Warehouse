@@ -18,6 +18,7 @@ namespace Warehouse.Services
         Task<bool> DeleteProjectAsync(Project project);
         Task<bool> AddUserAsync(Guid projectId, Guid userId);
         Task<bool> RemoveUserAsync(Guid projectId, Guid userId);
+        Task<bool> UpdateProjectAsync(Project project);
     }
 
     public class ProjectService : IProjectService
@@ -46,6 +47,7 @@ namespace Warehouse.Services
             return _tenantDataContext.Projects.Select(x => new ProjectViewModel()
             {
                 Id = x.Id,
+                Short = x.Short,
                 Accent = x.Accent,
                 Avatar = x.Avatar,
                 Created = x.Created,
@@ -169,6 +171,31 @@ namespace Warehouse.Services
 
             _tenantDataContext.ProjectEmployment.Remove(employment);
 
+            try
+            {
+                await _tenantDataContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateProjectAsync(Project project)
+        {
+            // var pr = await _tenantDataContext.Projects.FirstOrDefaultAsync(x => x.Id == project.Id);
+            // if (pr == null)
+            // {
+            //     Console.WriteLine("Project doesnt exist");
+            //     return false;
+            // }
+            //
+            // pr = null;
+            
+            _tenantDataContext.Projects.Update(project);
+            
             try
             {
                 await _tenantDataContext.SaveChangesAsync();

@@ -115,6 +115,24 @@ namespace Warehouse.Controllers.Client
 
             return BadRequest("Tenant doesn't exist");
         }
+
+        [HttpPut]
+        public async Task<ActionResult<bool>> Update(Project project)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"remove user for {tenant.Id} : {tenant.Name}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var projectService = new ProjectService(context);
+                    return Ok(await projectService.UpdateProjectAsync(project));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
     }
 
     public class AddProjectUser

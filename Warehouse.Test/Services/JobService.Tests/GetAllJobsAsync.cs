@@ -9,7 +9,7 @@ using Warehouse.Test.Seeds;
 namespace Warehouse.Test.Services.JobService.Tests
 {
     [TestFixture]
-    public class JobServiceGetJobAsync
+    public class GetAllJobsAsync
     {
         private DbContextOptions<TenantDataContext> _dbOptions;
 
@@ -34,14 +34,27 @@ namespace Warehouse.Test.Services.JobService.Tests
         }
 
         [Test]
-        public async Task GetJobAsync_ReturnsCorrectJob()
+        public async Task ReturnsListOfJobs()
         {
             using (var context = new TenantDataContext(_dbOptions))
             {
                 var jobService = new Warehouse.Services.JobService(context);
-                var id = new Guid("0C8EBA6A-9765-43FB-A80D-A8C06D46AA2F");
-                var job = await jobService.GetJobAsync(id);
-                Assert.AreEqual(id, job.Id);
+                Assert.AreEqual(10, (await jobService.GetAllJobsAsync()).Count);
+            }
+        }
+
+        [Test]
+        public async Task ReturnsListOfValidJobs()
+        {
+            using (var context = new TenantDataContext(_dbOptions))
+            {
+                var jobService = new Warehouse.Services.JobService(context);
+                var jobs = await jobService.GetAllJobsAsync();
+
+                foreach (var job in jobs)
+                {
+                    Assert.IsNotNull(job);
+                }
             }
         }
     }

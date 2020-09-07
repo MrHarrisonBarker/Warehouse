@@ -1,0 +1,22 @@
+<div class="d-flex flex-column w-100">
+  <div class="mat-headline" style="margin: 1rem;">Statuses</div>
+
+  <div *ngFor="let type of Types()" class="d-flex flex-row mb-3">
+    <input type="number" min="0" step="1" class="mr-3" #typeOrder [value]="type.order" (focusout)="DetectOrderChange(type,typeOrder.value)">
+    <div class="typeColour"><div [(colorPicker)]="type.colour" (colorPickerClose)="DetectColourChange(type)" [style.background]="type.colour" class="blip h-100"></div></div>
+    <input type="text" class="w-100 mx-3" #typeName [value]="type.name" (focusout)="DetectNameChange(type,typeName.value)">
+    <button mat-icon-button (click)="DeleteType(type)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <div class="d-flex flex-row">
+    <input type="number" min="0" step="1" class="mr-3" [value]="Types().length" #Order>
+    <div class="typeColour"><div [(colorPicker)]="colour" [style.background]="colour" class="blip h-100"></div></div>
+    <input type="text" class="w-100 mx-3" #Name>
+
+    <button mat-icon-button id="newListButton" (click)="NewType(Order.value,Name.value)">
+      <mat-icon>add_box</mat-icon>
+    </button>
+  </div>
+</div>

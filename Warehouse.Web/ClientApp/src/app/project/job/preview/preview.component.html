@@ -51,7 +51,9 @@
   </div>
 
   <div id="job">
+    <div class="greyText">{{Job.link}}</div>
     <div class="mat-display-1">{{Job.title}}</div>
+    <a *ngIf="Job.commit" [href]="projectService.GetCurrentProject().repo + '/commit/' + Job.commit" target="_blank">{{Job.commit.substr(0,7)}}</a>
     <div>{{Job.description}}</div>
   </div>
 

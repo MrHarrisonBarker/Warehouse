@@ -55,6 +55,11 @@ import {ProjectUsersComponent} from './project/project-users/project-users.compo
 import {JobsComponent} from "./project/job/jobs/jobs.component";
 import { ColorPickerModule } from 'ngx-color-picker';
 import {ImageCropperModule} from "ngx-image-cropper";
+import { BasicConfigComponent } from './tenant/tenant-config/basic-config/basic-config.component';
+import { StatusConfigComponent } from './tenant/tenant-config/status-config/status-config.component';
+import { TypeConfigComponent } from './tenant/tenant-config/type-config/type-config.component';
+import { PriorityConfigComponent } from './tenant/tenant-config/priority-config/priority-config.component';
+import { BasicProjectConfigComponent } from './project/config/basic-project-config/basic-project-config.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +93,12 @@ import {ImageCropperModule} from "ngx-image-cropper";
     TruncatePipe,
     TenantUsersComponent,
     ProjectUsersComponent,
-    JobsComponent
+    JobsComponent,
+    BasicConfigComponent,
+    StatusConfigComponent,
+    TypeConfigComponent,
+    PriorityConfigComponent,
+    BasicProjectConfigComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),

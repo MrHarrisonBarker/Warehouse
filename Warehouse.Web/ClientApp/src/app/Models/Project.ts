@@ -15,6 +15,7 @@ export interface projectEmployment
 export interface Project
 {
   id?: string;
+  short: string;
   name: string;
   description: string;
   created?: Date;
@@ -33,6 +34,7 @@ export interface Project
 export interface ProjectViewModel
 {
   id?: string;
+  short: string;
   name: string;
   description: string;
   created?: Date;

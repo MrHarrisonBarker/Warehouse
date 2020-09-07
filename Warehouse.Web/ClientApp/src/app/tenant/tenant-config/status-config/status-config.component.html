@@ -1,0 +1,25 @@
+<div class="d-flex flex-column w-100">
+  <div class="mat-headline" style="margin: 1rem;">Statuses</div>
+
+  <div *ngFor="let status of Statuses()" class="d-flex flex-row mb-3">
+    <input type="number" min="0" step="1" class="mr-3" #statusOrder [value]="status.order" (focusout)="DetectOrderChange(status,statusOrder.value)">
+    <div class="statusColour"><div [(colorPicker)]="status.colour" (colorPickerClose)="DetectColourChange(status)" [style.background]="status.colour" class="blip h-100"></div></div>
+    <input type="text" class="w-100 mx-3" #statusName [value]="status.name" (focusout)="DetectNameChange(status,statusName.value)">
+    <input type="checkbox" class="m-auto" #statusFinished [checked]="status.finished" (click)="DetectFinishedChange(status,statusFinished.checked)">
+    <button mat-icon-button (click)="DeleteStatus(status)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <div class="d-flex flex-row">
+    <input type="number" min="0" step="1" class="mr-3" [value]="Statuses().length" #Order>
+    <div class="statusColour"><div [(colorPicker)]="colour" [style.background]="colour" class="blip h-100"></div></div>
+    <input type="text" class="w-100 mx-3" #Name>
+    <input type="checkbox" class="m-auto" #Finished [checked]="false">
+
+
+    <button mat-icon-button id="newListButton" (click)="NewStatus(Order.value,Name.value,Finished.checked)">
+      <mat-icon>add_box</mat-icon>
+    </button>
+  </div>
+</div>

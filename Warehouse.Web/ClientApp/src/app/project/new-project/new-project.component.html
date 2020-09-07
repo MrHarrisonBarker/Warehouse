@@ -3,7 +3,12 @@
 
   <mat-form-field style="width: 100%" appearance="outline">
     <mat-label>Name</mat-label>
-    <input matInput #Name placeholder="name"/>
+    <input matInput #Name placeholder="name" (focusout)="setShort(Name.value)"/>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" appearance="outline">
+    <mat-label>Short</mat-label>
+    <input matInput #Short [(ngModel)]="short" placeholder="name"/>
   </mat-form-field>
 
   <mat-form-field style="width: 100%" appearance="outline">
@@ -47,6 +52,6 @@
 
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="newProject(Name.value,Description.value,Avatar.value,Repo.value)">New
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="newProject(Short.value,Name.value,Description.value,Avatar.value,Repo.value)">New
   </button>
 </mat-dialog-actions>

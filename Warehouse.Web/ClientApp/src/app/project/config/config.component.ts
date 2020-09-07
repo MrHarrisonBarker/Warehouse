@@ -8,6 +8,7 @@ import {ProjectService} from "../../Services/project.service";
 })
 export class ConfigComponent implements OnInit
 {
+  activeConfig: string = 'basic';
 
   constructor (public projectService: ProjectService)
   {

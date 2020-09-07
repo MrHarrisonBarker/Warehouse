@@ -1,0 +1,14 @@
+<div class="d-flex flex-column w-100">
+  <div class="mat-headline" style="margin: 1rem;">Tenant Info</div>
+
+  <img [src]="projectService.GetCurrentProject().avatar" width="100px" height="100px" class="mb-3">
+
+  <div class="d-flex flex-row mb-3">
+    <div class="projectColour"><div [(colorPicker)]="colour" (colorPickerClose)="DetectColourChange()" [style.background]="projectService.GetCurrentProject().accent" class="blip h-100"></div></div>
+    <input type="text" class="w-100 ml-3" [value]="projectService.GetCurrentProject().name" #projectName (focusout)="DetectNameChange(projectName.value)">
+  </div>
+  <textarea type="text" class="w-100 mb-3" [value]="projectService.GetCurrentProject().description" #projectDescription (focusout)="DetectDescriptionChange(projectDescription.value)"></textarea>
+
+  <input type="url" [value]="projectService.GetCurrentProject().repo" #projectRepo (focusout)="DetectRepoChange(projectRepo.value)">
+
+</div>

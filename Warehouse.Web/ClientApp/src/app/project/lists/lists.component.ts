@@ -22,6 +22,8 @@ export class ListsComponent implements OnInit
   public currentListId: string;
   public selectedJob: Job = null;
   public Loading: boolean = true;
+  public searchResults: Job[];
+  private JobBank: Job[];
 
   constructor (
     public projectService: ProjectService,
@@ -61,10 +63,10 @@ export class ListsComponent implements OnInit
   }
 
   GetJobsForList(): JobByStatus[] {
-    let jobs = this.jobService.GetJobs().filter(job => this.GetListFromStore().jobs.includes(job.id));
+    this.JobBank = this.jobService.GetJobs().filter(job => this.GetListFromStore().jobs.includes(job.id));
     let jobByStatus: JobByStatus[] = [];
 
-    jobs.forEach(job => {
+    this.JobBank.forEach(job => {
       let index = jobByStatus.findIndex(x => x.statusId == job.jobStatus.id);
 
       if (index == -1) {
@@ -131,5 +133,14 @@ export class ListsComponent implements OnInit
   NewList()
   {
     this.dialog.open(NewListComponent);
+  }
+
+  Search(JobSearch: string)
+  {
+    if (JobSearch != "") {
+      this.searchResults = this.JobBank.filter(job => job.title.toLowerCase().includes(JobSearch.toLocaleLowerCase()) || job.link.toLowerCase().includes(JobSearch.toLocaleLowerCase()));
+    } else {
+      this.searchResults = null
+    }
   }
 }

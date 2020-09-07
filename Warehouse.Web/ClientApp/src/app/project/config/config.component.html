@@ -1,0 +1,22 @@
+<div class="d-flex h-100">
+  <app-project-nav></app-project-nav>
+
+  <div class="d-flex flex-row w-100">
+
+    <div class="configList">
+
+      <div class="d-flex flex-row" id="listHeading">
+        <div style="font-size: xx-large;">Config</div>
+      </div>
+
+      <div class="d-flex flex-column listItem" (click)="activeConfig = 'basic'" [class.activeList]="activeConfig == 'basic'">
+        <div>Basic Config</div>
+      </div>
+
+    </div>
+
+    <app-basic-project-config *ngIf="activeConfig == 'basic'" class="config"></app-basic-project-config>
+
+  </div>
+
+</div>

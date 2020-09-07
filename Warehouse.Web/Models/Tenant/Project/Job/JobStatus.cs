@@ -18,7 +18,9 @@ namespace Warehouse.Models
     public class NewStatus
     {
         public string Name { get; set; }
+        public int Order { get; set; }
         public string Colour { get; set; }
+        public bool Finished { get; set; }
     }
 
     public class JobStatusViewModel

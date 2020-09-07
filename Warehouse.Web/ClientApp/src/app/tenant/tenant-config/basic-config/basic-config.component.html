@@ -1,0 +1,12 @@
+<div class="d-flex flex-column w-100">
+  <div class="mat-headline" style="margin: 1rem;">Tenant Info</div>
+
+  <img [src]="tenantService.Tenant.avatar" width="100px" height="100px" class="mb-3">
+
+  <div class="d-flex flex-row mb-3">
+    <div class="tenantColour"><div [(colorPicker)]="colour" (colorPickerClose)="DetectColourChange()" [style.background]="tenantService.Tenant.accent" class="blip h-100"></div></div>
+    <input type="text" class="w-100 ml-3" [value]="tenantService.Tenant.name" #tenantName (focusout)="DetectNameChange(tenantName.value)">
+  </div>
+  <textarea type="text" class="w-100" [value]="tenantService.Tenant.description" #tenantDescription (focusout)="DetectDescriptionChange(tenantDescription.value)"></textarea>
+
+</div>

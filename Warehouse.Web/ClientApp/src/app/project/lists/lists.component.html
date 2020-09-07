@@ -35,6 +35,20 @@
 
       <div class="d-flex flex-row flex-grow-1">
         <div class="d-flex flex-column" style="height: fit-content;">
+
+          <input placeholder="search" #JobSearch (keydown)="Search(JobSearch.value)" class="m-2">
+          <div class="listJobItem" *ngFor="let job of searchResults" (click)="SelectJob(job)" [class.activeJob]="job == selectedJob">
+            <div class="d-flex flex-column">
+              <div class="d-flex flex-row align-items-center">
+                <div [style.background]="tenantService.GetJobStatus(job).colour" class="blip mr-1"></div>
+                <div [style.background]="tenantService.GetJobType(job).colour" class="blip mr-1"></div>
+                <div [style.background]="tenantService.GetJobPriority(job).colour" class="blip mr-1"></div>
+                <div class="mx-1">{{job.title}}</div>
+                <!--          <div class="mat-caption">{{job.created | date:'short'}}</div>-->
+              </div>
+            </div>
+          </div>
+
           <div class="jobStatusList" *ngFor="let status of GetJobsForList()" id="listView">
             <div class="jobStatusName" [style.background-color]="tenantService.GetStatus(status.statusId).colour">{{tenantService.GetStatus(status.statusId).name}}</div>
             <div class="listJobItem" *ngFor="let job of status.jobs" (click)="SelectJob(job)" [class.activeJob]="job == selectedJob">

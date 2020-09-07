@@ -7,21 +7,26 @@ import {Job, JobPriority, JobStatus, JobType, NewPriority, NewStatus, NewType} f
 import {WINDOW} from "../window.providers";
 import {UserService} from "./user.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {newLineWithIndentation} from "tslint/lib/utils";
 
 export interface ITenantService
 {
   GetHostName(): string;
   GetTenantAsync(): Observable<TenantViewModel>;
   CreateTenantAsync(createTenant: CreateTenant): Observable<Tenant>;
+  UpdateTenantAsync(tenant: Tenant): Observable<boolean>;
 
   GetStatus(id:string): JobStatus;
 
   GetJobStatus(job:Job): JobStatus;
-  NewStatusAsync(name: string, colour: string, finished: boolean): Observable<JobStatus>;
+  NewStatusAsync(order:number,name: string, colour: string, finished: boolean): Observable<JobStatus>;
+  UpdateJobStatusAsync(status: JobStatus);
+  DeleteStatusAsync(status:JobStatus): Observable<boolean>;
+
   GetJobType(job:Job): JobType;
-  NewTypeAsync(name: string, colour: string): Observable<JobType>;
+  NewTypeAsync(order: number,name: string, colour: string): Observable<JobType>;
   GetJobPriority(job:Job): JobPriority;
-  NewPriorityAsync(name: string, colour:string): Observable<JobPriority>;
+  NewPriorityAsync(order: number, name: string, colour: string): Observable<JobPriority>;
 
   AddUserAsync(email: string): Observable<boolean>;
   RemoveUserAsync(email:string): Observable<boolean>;
@@ -63,10 +68,11 @@ export class TenantService implements ITenantService
     }));
   }
 
-  public NewStatusAsync (name: string, colour: string, finished: boolean): Observable<JobStatus>
+  public NewStatusAsync (order: number,name: string, colour: string, finished: boolean): Observable<JobStatus>
   {
     let newStatus: NewStatus = {
       name: name,
+      order: order,
       colour: colour,
       finished: finished
     };
@@ -82,10 +88,11 @@ export class TenantService implements ITenantService
     }));
   }
 
-  public NewPriorityAsync (name: string, colour: string): Observable<JobPriority>
+  public NewPriorityAsync (order:number,name: string, colour: string): Observable<JobPriority>
   {
     let newPriority: NewPriority = {
       name: name,
+      order: order,
       colour: colour
     };
     return this.http.post<JobPriority>(this.BaseUrl + 'api/jobextras/priority', newPriority).pipe(map(priority =>
@@ -101,10 +108,11 @@ export class TenantService implements ITenantService
     }));
   }
 
-  public NewTypeAsync (name: string, colour: string): Observable<JobType>
+  public NewTypeAsync (order: number, name: string, colour: string): Observable<JobType>
   {
     let newType: NewType = {
       name: name,
+      order: order,
       colour: colour
     };
     return this.http.post<JobType>(this.BaseUrl + 'api/jobextras/type', newType).pipe(map(type =>
@@ -168,5 +176,96 @@ export class TenantService implements ITenantService
 
   public RemoveUserAsync(email: string): Observable<boolean> {
     return undefined;
+  }
+
+  public UpdateJobStatusAsync(status: JobStatus): Observable<boolean>
+  {
+    return this.http.put<boolean>(this.BaseUrl + 'api/jobextras/status', status).pipe(map(updated => {
+      if (updated) {
+        this.Tenant.jobStatuses[this.Tenant.jobStatuses.findIndex(x => x.id == status.id)] = status;
+        this._snackBar.open(`Updated ${status.name} for ${this.Tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to Updated ${status.name} for ${this.Tenant.name}`,'close',{duration:1000});
+      }
+      return updated;
+    }));
+  }
+
+  public DeleteStatusAsync(status: JobStatus): Observable<boolean>
+  {
+    return this.http.delete<boolean>(this.BaseUrl + 'api/jobextras/status', {params: new HttpParams().set('id',status.id)}).pipe(map(deleted => {
+      if (deleted) {
+        this.Tenant.jobStatuses = this.Tenant.jobStatuses.filter(x => x.id != status.id);
+        this._snackBar.open(`Deleted ${status.name} from ${this.Tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to delete ${status.name} from ${this.Tenant.name}`,'close',{duration:1000});
+      }
+      return deleted;
+    }));
+  }
+
+  public UpdateJobTypeAsync(type: JobType): Observable<boolean>
+  {
+    return this.http.put<boolean>(this.BaseUrl + 'api/jobextras/type', type).pipe(map(updated => {
+      if (updated) {
+        this.Tenant.jobTypes[this.Tenant.jobTypes.findIndex(x => x.id == type.id)] = type;
+        this._snackBar.open(`Updated ${type.name} for ${this.Tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to Updated ${type.name} for ${this.Tenant.name}`,'close',{duration:1000});
+      }
+      return updated;
+    }));
+  }
+
+  public DeleteTypeAsync(type: JobType): Observable<boolean>
+  {
+    return this.http.delete<boolean>(this.BaseUrl + 'api/jobextras/type', {params: new HttpParams().set('id',type.id)}).pipe(map(deleted => {
+      if (deleted) {
+        this.Tenant.jobTypes = this.Tenant.jobTypes.filter(x => x.id != type.id);
+        this._snackBar.open(`Deleted ${type.name} from ${this.Tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to delete ${type.name} from ${this.Tenant.name}`,'close',{duration:1000});
+      }
+      return deleted;
+    }));
+  }
+
+  public UpdateJobPriorityAsync(priority: JobPriority): Observable<boolean>
+  {
+    return this.http.put<boolean>(this.BaseUrl + 'api/jobextras/priority', priority).pipe(map(updated => {
+      if (updated) {
+        this.Tenant.jobPriorities[this.Tenant.jobPriorities.findIndex(x => x.id == priority.id)] = priority;
+        this._snackBar.open(`Updated ${priority.name} for ${this.Tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to Updated ${priority.name} for ${this.Tenant.name}`,'close',{duration:1000});
+      }
+      return updated;
+    }));
+  }
+
+  public DeletePriorityAsync(priority: JobPriority): Observable<boolean>
+  {
+    return this.http.delete<boolean>(this.BaseUrl + 'api/jobextras/priority', {params: new HttpParams().set('id',priority.id )}).pipe(map(deleted => {
+      if (deleted) {
+        this.Tenant.jobPriorities = this.Tenant.jobPriorities.filter(x => x.id != priority.id);
+        this._snackBar.open(`Deleted ${priority.name} from ${this.Tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to delete ${priority.name} from ${this.Tenant.name}`,'close',{duration:1000});
+      }
+      return deleted;
+    }));
+  }
+
+  public UpdateTenantAsync(tenant: Tenant): Observable<boolean>
+  {
+    return this.http.put<boolean>(this.BaseUrl + 'api/tenant', this.Tenant).pipe(map(updated => {
+      if (updated) {
+        this.Tenant = tenant;
+        this._snackBar.open(`Updated ${tenant.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to Updated ${tenant.name}`,'close',{duration:1000});
+      }
+      return updated;
+    }));
   }
 }

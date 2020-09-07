@@ -194,8 +194,9 @@ namespace Warehouse.Contexts
                 Created = DateTime.Now,
                 Description = "Development project for development",
                 Id = projectId,
+                Short = "Dev",
                 Name = "Development",
-                Repo = "",
+                Repo = "https://github.com/MrHarrisonBarker/Warehouse",
                 Accent = "#1ad960",
                 Avatar = "https://pbs.twimg.com/profile_images/1292028907101671425/pp02tz90_400x400.jpg"
             };
@@ -222,11 +223,12 @@ namespace Warehouse.Contexts
                     Title = $"job #{count}",
                     Project = project,
                     List = list,
-                    Link = $"{createTenant.Tenant.Name}-{count}",
+                    Link = $"{project.Name.Substring(0,3)}-{count}",
                     AssociatedUrl = "harrisonbarker.co.uk",
                     JobStatus = statuses[new Random().Next(0, statuses.Count)],
                     JobPriority = priorities[new Random().Next(0, priorities.Count)],
-                    JobType = types[new Random().Next(0, types.Count)]
+                    JobType = types[new Random().Next(0, types.Count)],
+                    Commit = "d1b13d624f6d812ffa39d8460716ca8087737f1c"
                 });
                 count++;
             }

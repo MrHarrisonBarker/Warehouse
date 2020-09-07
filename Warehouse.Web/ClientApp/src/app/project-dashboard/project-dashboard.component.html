@@ -1,11 +1,12 @@
 <div class="d-flex h-100">
   <app-project-nav></app-project-nav>
   <div class="w-100 d-flex flex-column" style="max-height: 100vh;">
+    <div class="w-100" style="height: 10px" [style.background-color]="GetProjectFromStore().accent"></div>
     <div class="d-flex p-3 flex-row justify-content-between" id="projectDetails">
       <div class="d-flex flex-row">
         <img id="projectAvatar" width="60px" height="60px" [src]="GetProjectFromStore().avatar">
         <div class="d-flex flex-column mx-3">
-          <div id="projectName">{{GetProjectFromStore().name}}</div>
+          <div id="projectName">{{GetProjectFromStore().name}} <span class="greyText">{{GetProjectFromStore().short}}</span></div>
           <div id="projectDescription">{{GetProjectFromStore().description}}</div>
         </div>
       </div>
@@ -61,6 +62,7 @@
               <div class="mx-1">{{job.title}}</div>
             </div>
             <div class="project-description">{{job.description | truncate}}</div>
+            <div class="project-link">{{job.link}}</div>
           </div>
         </div>
 

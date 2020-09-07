@@ -67,3 +67,21 @@ mat-list-item:hover {
   background: #7289da;
   color: #fff;
 }
+
+.jobMention {
+  background: rgba(218, 114, 214, 0.1);
+  color: #da72d6;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.jobMention:hover {
+  background: #da72d6;
+  color: #fff;
+}
+
+input, textarea {
+  border: 1px solid rgba(12, 12, 13, 0.2);
+  padding: 0.5rem;
+}

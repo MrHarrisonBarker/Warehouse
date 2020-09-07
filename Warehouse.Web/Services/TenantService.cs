@@ -19,6 +19,7 @@ namespace Warehouse.Services
         Task<IList<TenantConfig>> GetAllTenantsAsync();
         Task<bool> AddUserAsync(string email);
         Task<bool> RemoveUserAsync(Guid userId);
+        Task<bool> UpdateTenantAsync(TenantConfig tenant, TenantConfig tenantConfig);
     }
 
     public class TenantService : ITenantService
@@ -184,6 +185,26 @@ namespace Warehouse.Services
 
             _multiTenantContext.Employments.Remove(employment);
 
+            try
+            {
+                await _multiTenantContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateTenantAsync(TenantConfig tenant, TenantConfig tenantConfig)
+        {
+            tenant.Accent = tenantConfig.Accent;
+            tenant.Avatar = tenantConfig.Avatar;
+            tenant.Description = tenantConfig.Description;
+            tenant.Name = tenantConfig.Name;
+
+            // _multiTenantContext.TenantConfigs.Update(tenantConfig);
             try
             {
                 await _multiTenantContext.SaveChangesAsync();

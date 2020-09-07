@@ -77,7 +77,7 @@ namespace Warehouse.Services
             newJob.Job.JobPriority = priority;
             newJob.Job.JobType = type;
 
-            newJob.Job.Link = $"{project.Name}-{project.Jobs.Count}";
+            newJob.Job.Link = $"{project.Short}-{project.Jobs.Count}";
 
             await _tenantDataContext.Jobs.AddAsync(newJob.Job);
 

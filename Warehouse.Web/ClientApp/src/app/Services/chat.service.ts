@@ -1,6 +1,6 @@
-import {Inject, Injectable} from '@angular/core';
+import {EventEmitter, Inject, Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Chat, Room} from "../Models/Room";
+import {Chat, Room, UserChat} from "../Models/Room";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {List} from "../Models/List";
@@ -15,6 +15,7 @@ export class ChatService
   private BaseUrl: string;
   public Rooms: Room[] = [];
   connection: HubConnection;
+  public NewChat: EventEmitter<any> = new EventEmitter<any>();
 
   constructor (private http: HttpClient, @Inject('BASE_URL') baseUrl: string, private authService: AuthService)
   {
@@ -52,6 +53,32 @@ export class ChatService
     }));
   }
 
+  GetUserChats(id: string) : UserChat[]
+  {
+    let chats = this.GetRoomFromStore(id).chats;
+    if (chats != null && chats.length > 0) {
+      let userChats: UserChat[] = [{
+        userId: chats[0].userId,
+        chats: [chats[0]]
+      }];
+
+      for (let i = 1; i < chats.length; i++) {
+        let diff = new Date(chats[i].timeStamp).getTime() - new Date(userChats[userChats.length - 1].chats[userChats[userChats.length - 1].chats.length - 1].timeStamp).getTime();
+        if (chats[i].userId == userChats[userChats.length - 1].userId && (diff / (1000 * 60)) <= 1) {
+          userChats[userChats.length - 1].chats.push(chats[i]);
+        } else {
+          userChats.push({
+            userId: chats[i].userId,
+            chats: [chats[i]]
+          });
+        }
+      }
+
+      return userChats;
+    }
+    return null;
+  }
+
   GetRoomFromStore (id: string): Room
   {
     return this.Rooms.find(x => x.id == id);
@@ -76,6 +103,7 @@ export class ChatService
     {
       console.log("new chat", chat);
       this.Rooms[this.Rooms.findIndex(x => x.id == chat.room.id)].chats.push(chat);
+      this.NewChat.emit("new");
     });
 
     this.connection.on("disconnect", disconnect =>

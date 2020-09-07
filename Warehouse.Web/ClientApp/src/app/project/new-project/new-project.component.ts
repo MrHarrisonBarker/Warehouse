@@ -17,6 +17,7 @@ export class NewProjectComponent implements OnInit
   selectedUsers: User[] = [];
   userBank: User[] = [];
   color: any;
+  short: string;
 
   constructor (
     private projectService: ProjectService,
@@ -37,10 +38,11 @@ export class NewProjectComponent implements OnInit
     this.selectedUser = null;
   }
 
-  newProject (name: string, description: string, avatar: string, repo: string)
+  newProject (short:string,name: string, description: string, avatar: string, repo: string)
   {
     let newProject: NewProject = {
       project: {
+        short: short,
         name: name,
         description: description,
         accent: this.color,
@@ -54,5 +56,12 @@ export class NewProjectComponent implements OnInit
     {
       console.log(project);
     });
+  }
+
+  setShort(name: string)
+  {
+    if (this.short == null) {
+      this.short = name.substr(0,3).toUpperCase();
+    }
   }
 }

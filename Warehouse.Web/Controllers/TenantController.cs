@@ -63,6 +63,20 @@ namespace Warehouse.Controllers
                 });
             }
         }
+        
+        [HttpPut]
+        public async Task<ActionResult<bool>> Update(TenantConfig tenantConfig)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"updating tenant {tenant.Id} : {tenant.Name}");
+                return await _tenantService.UpdateTenantAsync(tenant, tenantConfig);
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
 
         [HttpPost]
         public async Task<ActionResult<TenantConfig>> Create([FromBody]CreateTenant createTenant)

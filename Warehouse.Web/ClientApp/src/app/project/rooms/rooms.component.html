@@ -2,11 +2,21 @@
   <app-project-nav></app-project-nav>
 
   <div id="roomList">
-    <button mat-icon-button (click)="NewRoom()"><mat-icon>add_box</mat-icon></button>
-    <div *ngFor="let room of chatService.Rooms"  class="listItem" [class.activeRoom]="currentRoomId == room.id">
+
+    <div class="d-flex flex-row" id="roomsHeading">
+      <div style="font-size: xx-large;">Chats</div>
+      <button mat-icon-button id="newListButton" (click)="NewRoom()">
+        <mat-icon>add_box</mat-icon>
+      </button>
+    </div>
+
+
+    <div *ngFor="let room of chatService.Rooms" class="listItem" [class.activeRoom]="currentRoomId == room.id">
       <div class="d-flex justify-content-between align-items-center h-100">
-        <div (click)="GetRoom(room.id)">{{room.name}}</div>
-        <button *ngIf="currentRoomId == room.id" mat-icon-button [matMenuTriggerFor]="roomMenu"><mat-icon>more_vert</mat-icon></button>
+        <div (click)="GetRoom(room.id).subscribe()">{{room.name}}</div>
+        <button *ngIf="currentRoomId == room.id" mat-icon-button [matMenuTriggerFor]="roomMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
       </div>
 
       <mat-menu #roomMenu="matMenu">
@@ -25,24 +35,30 @@
   <div class="d-flex flex-column flex-grow-1 px-3">
 
     <div class="d-flex flex-row" id="memberList">
-      <avatar *ngFor="let user of GetRoomUsers()" [User]="user"></avatar>
+      <avatar *ngFor="let user of users" [User]="user"></avatar>
     </div>
 
-    <div #room id="room" [scrollTop]="room.scrollHeight">
-      <chat [Chat]="chat" *ngFor="let chat of this.chatService.GetRoomFromStore(this.currentRoomId).chats"></chat>
+    <!--    [scrollTop]="room.scrollHeight"-->
+    <div #room id="room">
+      <chat [userChat]="userChat" *ngFor="let userChat of this.chatService.GetUserChats(this.currentRoomId)"></chat>
     </div>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Message #{{this.chatService.GetRoomFromStore(this.currentRoomId)?.name}}</mat-label>
-      <input matInput type="text" [(ngModel)]="message" [formControl]="mentionControl" (keyup.enter)="SendMessage()" [matAutocomplete]="mention" [matAutocompleteDisabled]="message.charAt(0) != '@'">
+<!--    <div id="MessageInput" role="textbox" contenteditable="true" aria-multiline="false" #Message [(ngModel)]="message" (keydown)="Event($event)"></div>-->
 
-      <mat-autocomplete autoActiveFirstOption #mention="matAutocomplete" class="pb-0">
-        <mat-option *ngFor="let user of GetRoomUsers()" [value]="'@' + user.id">
-          {{user.displayName}}
-        </mat-option>
-      </mat-autocomplete>
+    <input  id="MessageInput" spellcheck="true" type="text" #Message [(ngModel)]="message"  (keyup.backspace)="Backspace()"  (keypress)="Complete($event,Message.selectionStart)" autocomplete="off"/>
 
-    </mat-form-field>
+    <!--    <mat-form-field appearance="outline">-->
+<!--      <mat-label>Message #{{this.chatService.GetRoomFromStore(this.currentRoomId)?.name}}</mat-label>-->
+<!--      <input matInput type="text" #Message [(ngModel)]="message" [innerHTML]="message" (keyup.backspace)="Backspace()"  (keypress)="Complete($event,Message.selectionStart)" autocomplete="off"/>-->
+
+<!--      -->
+
+      <div id="AutoComplete" class="shadow" *ngIf="ShowUserMention || ShowJobMention" (focusout)="ShowUserMention = false; ShowJobMention = false">
+        <div *ngIf="ShowJobMention"><div class="jobMentionItem" [class.selectedJob]="selectedJob == job" *ngFor="let job of SearchJobs(Message.selectionStart)" (click)="mentionJob(job,Message.selectionStart)">{{job.link}}</div></div>
+        <div *ngIf="ShowUserMention"><div class="jobMentionItem" [class.selectedUser]="selectedUser == user" *ngFor="let user of SearchUsers(Message.selectionStart)" (click)="mentionUser(user,Message.selectionStart)">{{user.displayName}}</div></div>
+      </div>
+
+<!--    </mat-form-field>-->
   </div>
 
 
@@ -76,7 +92,6 @@
   <!--          </mat-form-field>-->
   <!--        </div>-->
   <!--      </div>-->
-
 
 
   <!--    </div>-->

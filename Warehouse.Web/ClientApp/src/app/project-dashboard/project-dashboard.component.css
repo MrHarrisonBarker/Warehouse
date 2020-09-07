@@ -126,4 +126,11 @@
 .project-description {
   color: #757575;
   font-style: italic;
+  flex-grow: 1;
+  text-align: end;
+  padding: 0 0.5rem 0 0;
+}
+
+.project-link {
+  font-style: italic;
 }

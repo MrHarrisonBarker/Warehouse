@@ -10,6 +10,12 @@ export interface Chat
   room: Room;
 }
 
+export interface UserChat
+{
+  userId: string;
+  chats: Chat[];
+}
+
 export interface Room
 {
   id?: string;

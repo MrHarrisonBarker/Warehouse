@@ -23,258 +23,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3101d830-054e-4167-96ef-8b84e111b046" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Seeds/TenantDataContextTestSeed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.AddUserAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.CreateJobAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.DeleteJobAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetAllJobsAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetJobAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.RemoveUserAsync.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.UpdateJobAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/e2e/tsconfig.e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Event.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Job.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/List.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/OnlineUser.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Project.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Room.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/Tenant.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Models/User.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/auth.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/chat.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/job.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/list.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/online-user.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/project.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/room.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/tenant.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/Services/user.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.server.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth.guard.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/auth.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/bottom-notification/bottom-notification.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/bottom-notification/bottom-notification.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/bottom-notification/bottom-notification.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/nav-menu/nav-menu.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/overview/overview.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/overview/overview.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/overview/overview.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/overview/overview.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project-dashboard/project-dashboard.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/config/config.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/config/config.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/config/config.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/config/config.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/events.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/events.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/events.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/events.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/new-event/new-event.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/new-event/new-event.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/new-event/new-event.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/events/new-event/new-event.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/job.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/job.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/job.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/job.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/jobs/jobs.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/jobs/jobs.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/jobs/jobs.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/jobs/jobs.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/new-job/new-job.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/job/preview/preview.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/lists.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/lists/new-list/new-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/new-project/new-project.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-nav/project-nav.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-users/project-users.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-users/project-users.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-users/project-users.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/project-users/project-users.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/chat/chat.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/new-room/new-room.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/rooms/rooms.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/project/work/work.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/add-tenant-user/add-tenant-user.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/create-tenant/create-tenant.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-nav/tenant-nav.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/tenant/tenant-users/tenant-users.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/truncate.pipe.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/truncate.pipe.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/user-avatar/user-avatar.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/user-avatar/user-avatar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/user-avatar/user-avatar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/user-avatar/user-avatar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/window.providers.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/tsconfig.server.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contexts/MultiTenantContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contexts/TenantDataContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contexts/TenantDataContextSeed.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/EventController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/JobController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/JobExtrasController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/ListController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/ProjectController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/RoomController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Client/TenantUserController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/TenantController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hubs/ChatHub.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hubs/UserHub.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200815174542_inital.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200815174542_inital.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200816030732_users.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200816030732_users.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200816183853_fluff.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200816183853_fluff.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200821163412_colours.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20200821163412_colours.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/MultiTenantContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/TenantData/20200821203854_data.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/TenantData/20200821203854_data.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/TenantData/TenantDataContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Employment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/OnlineUser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Permission.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Role.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Joins/JobEmployment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Joins/ListEmployment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Joins/ProjectEmployment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Joins/RoomMembership.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Event.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Job/Job.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Job/JobPriority.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Job/JobStatus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Job/JobType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/List.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Project.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/Project/Room.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/TenantConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tenant/UserId.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MultiTenancyExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Error.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Error.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/_ViewImports.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ChatService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/EventService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/JobExtrasService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/JobService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ListService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/OnlineUserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ProjectService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/RoomService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/TenantService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/TenantUserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/UserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TenantResolutionStrategy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warehouse/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warehouse/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.AddUserAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/AddUserAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.CreateJobAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/CreateJobAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.DeleteJobAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/DeleteJobAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetAllJobsAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/GetAllJobsAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetJobAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/GetJobAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.RemoveUserAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/RemoveUserAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.UpdateJobAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/UpdateJobAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Test/Warehouse.Test.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Test/Warehouse.Test.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Room.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Room.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/chat.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/chat.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/project.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/add-project-user/add-project-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/add-project-user/add-project-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/signup/signup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/tenant-config.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/tenant-config.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/tenant-config.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/tenant-config.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContextSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/JobExtrasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/JobExtrasController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/ProjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/ProjectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Controllers/TenantController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Controllers/TenantController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Migrations/TenantData/TenantDataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Migrations/TenantData/TenantDataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/JobStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/JobStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Project.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/JobExtrasService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/JobExtrasService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/JobService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/JobService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/ProjectService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.Web/Services/TenantService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.Web/Services/TenantService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,42 +90,67 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetAllJobsAsync.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.UpdateJobAsync.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.AddUserAsync.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.RemoveUserAsync.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.CreateJobAsync.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.DeleteJobAsync.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/GetAllJobsAsync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/UpdateJobAsync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/AddUserAsync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/RemoveUserAsync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/CreateJobAsync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/DeleteJobAsync.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/JobController.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService/JobService.GetAllJobsAsync.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Test.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetAllJobsAsync.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/type-config/type-config.component.css" />
         <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetJobAsync.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Test/Seeds/TenantDataContextTestSeed.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/AddUserAsync.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.CreateJobAsync.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.AddUserAsync.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.DeleteJobAsync.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.GetAllJobsAsync.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.RemoveUserAsync.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/JobService.UpdateJobAsync.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/login/login.component.css" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/login/login.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Test/Services/JobService.Tests/CreateJobAsync.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/add-project-user/add-project-user.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/add-room-user/add-room-user.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/add-project-user/add-project-user.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Controllers/Client/ProjectController.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/tenant.service.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/basic-config/basic-config.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/basic-config/basic-config.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Services/TenantService.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Controllers/TenantController.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/basic-project-config/basic-project-config.component.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant/tenant-config/basic-config/basic-config.component.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/basic-project-config/basic-project-config.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/basic-project-config/basic-project-config.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/tenant-dashboard/tenant-dashboard.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/config/config.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/Job.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Project.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Services/ProjectService.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Project.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Startup.cs" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/signup/signup.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/signup/signup.component.html" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/JobStatus.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/JobPriority.cs" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/Models/Tenant/Project/Job/JobType.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/project.service.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/new-project/new-project.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project-dashboard/project-dashboard.component.css" />
         <option value="$PROJECT_DIR$/Warehouse.Web/Contexts/TenantDataContextSeed.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/preview/preview.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/Services/JobService.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/job/new-job/new-job.component.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Models/Job.ts" />
         <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.ts" />
-        <option value="$PROJECT_DIR$/Warehouse.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/lists/lists.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/styles.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.css" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/Services/chat.service.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/rooms.component.ts" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.html" />
+        <option value="$PROJECT_DIR$/Warehouse.Web/ClientApp/src/app/project/rooms/chat/chat.component.ts" />
       </list>
     </option>
   </component>
@@ -334,9 +164,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502036" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30017453" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="RiderUnitTestingPageId" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Warehouse.Web/ClientApp/node_modules/typescript/lib" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Warehouse">
@@ -380,7 +213,9 @@
       <option name="presentableId" value="Default" />
       <updated>1599193430384</updated>
       <workItem from="1599193442825" duration="5347000" />
-      <workItem from="1599199904984" duration="4801000" />
+      <workItem from="1599199904984" duration="23870000" />
+      <workItem from="1599242064797" duration="7024000" />
+      <workItem from="1599403415862" duration="20385000" />
     </task>
     <servers />
   </component>
@@ -455,9 +290,118 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="397" y="210" key="SettingsEditor" timestamp="1599200143185">
+    <state x="360" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599284571657">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="397" y="210" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1599200143185" />
+    <state x="360" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1599284571657" />
+    <state width="1750" height="401" key="GridCell.Tab.0.bottom" timestamp="1599419831814">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831814" />
+    <state width="1750" height="401" key="GridCell.Tab.0.center" timestamp="1599419831813">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831813" />
+    <state width="1750" height="401" key="GridCell.Tab.0.left" timestamp="1599419831812">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831812" />
+    <state width="1750" height="401" key="GridCell.Tab.0.right" timestamp="1599419831813">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831813" />
+    <state width="1750" height="401" key="GridCell.Tab.1.bottom" timestamp="1599419831815">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831815" />
+    <state width="1750" height="401" key="GridCell.Tab.1.center" timestamp="1599419831814">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831814" />
+    <state width="1750" height="401" key="GridCell.Tab.1.left" timestamp="1599419831814">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831814" />
+    <state width="1750" height="401" key="GridCell.Tab.1.right" timestamp="1599419831815">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831815" />
+    <state width="1750" height="401" key="GridCell.Tab.2.bottom" timestamp="1599419831816">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.2.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831816" />
+    <state width="1750" height="401" key="GridCell.Tab.2.center" timestamp="1599419831815">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.2.center/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831815" />
+    <state width="1750" height="401" key="GridCell.Tab.2.left" timestamp="1599419831815">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.2.left/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831815" />
+    <state width="1750" height="401" key="GridCell.Tab.2.right" timestamp="1599419831816">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.2.right/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831816" />
+    <state width="1750" height="401" key="GridCell.Tab.3.bottom" timestamp="1599419831817">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.3.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831817" />
+    <state width="1750" height="401" key="GridCell.Tab.3.center" timestamp="1599419831816">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.3.center/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831816" />
+    <state width="1750" height="401" key="GridCell.Tab.3.left" timestamp="1599419831816">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.3.left/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831816" />
+    <state width="1750" height="401" key="GridCell.Tab.3.right" timestamp="1599419831817">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.3.right/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831817" />
+    <state width="1750" height="401" key="GridCell.Tab.4.bottom" timestamp="1599419831818">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.4.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831818" />
+    <state width="1750" height="401" key="GridCell.Tab.4.center" timestamp="1599419831817">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.4.center/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831817" />
+    <state width="1750" height="401" key="GridCell.Tab.4.left" timestamp="1599419831817">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.4.left/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831817" />
+    <state width="1750" height="401" key="GridCell.Tab.4.right" timestamp="1599419831817">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="401" key="GridCell.Tab.4.right/0.23.1792.1097@0.23.1792.1097" timestamp="1599419831817" />
+    <state x="669" y="268" key="RiderGenerateDialog" timestamp="1599227007736">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="669" y="268" key="RiderGenerateDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1599227007736" />
+    <state x="397" y="210" key="SettingsEditor" timestamp="1599286160748">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="397" y="210" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1599286160748" />
+    <state x="100" y="123" width="1592" height="897" key="VCS.FileHistoryDialog" timestamp="1599243099807">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="100" y="123" width="1592" height="897" key="VCS.FileHistoryDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1599243099807" />
+    <state x="694" y="492" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599284767366">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="694" y="492" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097@0.23.1792.1097" timestamp="1599284767366" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1599436789489">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599436789489" />
+    <state x="560" y="265" key="run.anything.popup" timestamp="1599287502643">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="560" y="265" key="run.anything.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599287502643" />
+    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup" timestamp="1599418706676">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599418706676" />
+    <state x="559" y="266" width="672" height="678" key="search.everywhere.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1599210520942" />
   </component>
 </project>

@@ -1,46 +1,37 @@
 <div class="d-flex h-100">
   <tenant-nav></tenant-nav>
 
-  <div class="d-flex flex-column w-100">
+  <div class="d-flex flex-row w-100">
 
-    <div class="d-flex flex-column">
-      <div class="mat-headline">Statuses</div>
+    <div class="configList">
 
-      <div *ngFor="let status of tenantService.Tenant.jobStatuses" class="d-flex flex-row">
-        <label> name <input [value]="status.name"> </label> <label> colour <input [value]="status.colour"> </label>
-        <button mat-icon-button (click)="DeleteStatus(status)"><mat-icon>delete</mat-icon></button>
+      <div class="d-flex flex-row" id="listHeading">
+        <div style="font-size: xx-large;">Config</div>
       </div>
 
-      <div class="d-flex flex-row"><label> name <input #StatusName> </label> <label> colour <input #StatusColour> </label> <label> finished <input #StatusFinished type="checkbox" [checked]="false"> </label></div>
-
-      <button mat-stroked-button color="primary" (click)="NewStatus(StatusName.value,StatusColour.value,StatusFinished.checked)">Add</button>
-    </div>
-
-    <div class="d-flex flex-column">
-      <div class="mat-headline">Types</div>
-
-      <div *ngFor="let type of tenantService.Tenant.jobTypes" class="d-flex flex-row">
-        <label> name <input [value]="type.name"> </label> <label> colour <input [value]="type.colour"> </label>
-        <button mat-icon-button (click)="DeleteType(type)"><mat-icon>delete</mat-icon></button>
+      <div class="d-flex flex-column listItem" (click)="activeConfig = 'basic'" [class.activeList]="activeConfig == 'basic'">
+        <div>Basic Config</div>
       </div>
 
-      <div class="d-flex flex-row"><label> name <input #TypeName> </label> <label> colour <input #TypeColour> </label></div>
-
-      <button mat-stroked-button color="primary" (click)="NewType(TypeName.value,TypeColour.value)">Add</button>
-    </div>
-
-    <div class="d-flex flex-column">
-      <div class="mat-headline">Priorities</div>
-
-      <div *ngFor="let priority of tenantService.Tenant.jobPriorities" class="d-flex flex-row">
-        <label> name <input [value]="priority.name"> </label> <label> colour <input [value]="priority.colour"> </label>
-        <button mat-icon-button (click)="DeletePriority(priority)"><mat-icon>delete</mat-icon></button>
+      <div class="d-flex flex-column listItem" (click)="activeConfig = 'status'" [class.activeList]="activeConfig == 'status'">
+        <div>Statuses</div>
       </div>
 
-      <div class="d-flex flex-row"><label> name <input #PriorityName> </label> <label> colour <input #PriorityColour> </label></div>
+      <div class="d-flex flex-column listItem" (click)="activeConfig = 'type'" [class.activeList]="activeConfig == 'type'">
+        <div>Types</div>
+      </div>
 
-      <button mat-stroked-button color="primary" (click)="NewPriority(PriorityName.value,PriorityColour.value)">Add</button>
+      <div class="d-flex flex-column listItem" (click)="activeConfig = 'priority'" [class.activeList]="activeConfig == 'priority'">
+        <div>Priorities</div>
+      </div>
+
     </div>
+
+    <app-basic-config *ngIf="activeConfig == 'basic'" class="config"></app-basic-config>
+    <app-status-config *ngIf="activeConfig == 'status'" class="config"></app-status-config>
+    <app-type-config *ngIf="activeConfig == 'type'" class="config"></app-type-config>
+    <app-priority-config *ngIf="activeConfig == 'priority'" class="config"></app-priority-config>
+
   </div>
 
 </div>

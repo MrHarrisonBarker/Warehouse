@@ -27,6 +27,8 @@ export interface IProjectService {
 
   AddUserAsync(email: string): Observable<boolean>;
   RemoveUserAsync(email: string): Observable<boolean>;
+
+  UpdateProjectAsync(project: ProjectViewModel) : Observable<boolean>;
 }
 
 @Injectable({
@@ -51,8 +53,9 @@ export class ProjectService implements IProjectService {
         this.jobService.MergeJobs(project.jobs);
         this.listService.MergeLists(project.lists);
 
-        let newProject = {
+        let newProject: ProjectViewModel = {
           employments: project.employments.map(employment => employment.userId),
+          short: project.short,
           accent: project.accent,
           avatar: project.avatar,
           created: project.created,
@@ -87,6 +90,7 @@ export class ProjectService implements IProjectService {
 
       let index = this.Projects.findIndex(x => x.id == project.id);
       let newProject = {
+        short: project.short,
         employments: project.employments != null ? project.employments.map(employment => employment.userId) : [],
         accent: project.accent,
         avatar: project.avatar,
@@ -116,6 +120,7 @@ export class ProjectService implements IProjectService {
     return this.http.post<Project>(this.BaseUrl + 'api/project', newProject).pipe(map(project => {
       if (project) {
         this.Projects.push({
+          short: project.short,
           employments: project.employments != null ? project.employments.map(employment => employment.userId) : [],
           accent: project.accent,
           avatar: project.avatar,
@@ -145,18 +150,20 @@ export class ProjectService implements IProjectService {
     return this.Projects.find(x => x.id == id);
   }
 
-  public AddUserAsync(email: string): Observable<any> {
+  public AddUserAsync(id: string): Observable<any> {
     let addUser: AddProjectUser = {
       projectId: this.currentProjectId,
-      userId: this.userService.TenantEmployments.find(x => x.email == email).id
+      userId: id
     };
+
+    let user = this.userService.TenantEmployments.find(x => x.id == id);
 
     return this.http.post<boolean>(this.BaseUrl + 'api/project/adduser', addUser).pipe(map(success => {
       if (success) {
-        this.GetCurrentProject().employments.push(this.userService.TenantEmployments.find(x => x.email == email).id);
-        this._snackBar.open(`Added ${email} to ${this.GetCurrentProject().name}`,'close',{duration:1000});
+        this.GetCurrentProject().employments.push(user.id);
+        this._snackBar.open(`Added ${user.displayName} to ${this.GetCurrentProject().name}`,'close',{duration:1000});
       } else {
-        this._snackBar.open(`Failed to add ${email} to ${this.GetCurrentProject().name}`,'close',{duration:1000});
+        this._snackBar.open(`Failed to add ${user.displayName} to ${this.GetCurrentProject().name}`,'close',{duration:1000});
       }
       return success;
     }));
@@ -182,5 +189,22 @@ export class ProjectService implements IProjectService {
 
   public GetCurrentProject(): ProjectViewModel {
     return this.GetProject(this.currentProjectId);
+  }
+
+  public UpdateProjectAsync(project: ProjectViewModel) : Observable<boolean>
+  {
+    project.employments = null;
+    project.jobs = null;
+    project.lists = null;
+
+    return this.http.put<boolean>(this.BaseUrl + 'api/project', project).pipe(map(updated => {
+      if (updated) {
+        this.Projects[this.Projects.findIndex(x => x.id == project.id)] = project;
+        this._snackBar.open(`Updated ${project.name}`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to Updated ${project.name}`,'close',{duration:1000});
+      }
+      return updated;
+    }));
   }
 }

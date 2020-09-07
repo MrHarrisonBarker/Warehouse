@@ -302,6 +302,9 @@ namespace Warehouse.Migrations.TenantData
                     b.Property<string>("Repo")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<string>("Short")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.HasKey("Id");
 
                     b.ToTable("Projects");

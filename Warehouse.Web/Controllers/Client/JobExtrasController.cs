@@ -53,7 +53,43 @@ namespace Warehouse.Controllers.Client
 
             return BadRequest("Tenant doesn't exist");
         }
-        
+
+        [HttpPut("status")]
+        public async Task<ActionResult<bool>> UpdateStatus(JobStatus jobStatus)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"updating status {jobStatus.Name}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobExtrasService = new JobExtrasService(context);
+                    return Ok(await jobExtrasService.UpdateJobStatus(jobStatus));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
+
+        [HttpDelete("status")]
+        public async Task<ActionResult<bool>> DeleteStatus(Guid id)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"deleting status {id}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobExtrasService = new JobExtrasService(context);
+                    return Ok(await jobExtrasService.DeleteJobStatus(id));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
+            
         [HttpGet("type")]
         public async Task<ActionResult<IList<JobType>>> GetAllTypes()
         {
@@ -90,6 +126,42 @@ namespace Warehouse.Controllers.Client
             return BadRequest("Tenant doesn't exist");
         }
         
+        [HttpPut("type")]
+        public async Task<ActionResult<bool>> UpdateType(JobType jobType)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"updating type {jobType.Name}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobExtrasService = new JobExtrasService(context);
+                    return Ok(await jobExtrasService.UpdateJobType(jobType));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
+        
+        [HttpDelete("type")]
+        public async Task<ActionResult<bool>> DeleteType(Guid id)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"deleting type {id}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobExtrasService = new JobExtrasService(context);
+                    return Ok(await jobExtrasService.DeleteJobType(id));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
+        
         [HttpGet("priority")]
         public async Task<ActionResult<IList<JobPriority>>> GetAllPriorities()
         {
@@ -120,6 +192,42 @@ namespace Warehouse.Controllers.Client
                 {
                     var jobExtrasService = new JobExtrasService(context);
                     return Ok(await jobExtrasService.CreateJobPriority(newPriority));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
+        
+        [HttpPut("priority")]
+        public async Task<ActionResult<bool>> UpdatePriority(JobPriority jobPriority)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"updating priority {jobPriority.Name}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobExtrasService = new JobExtrasService(context);
+                    return Ok(await jobExtrasService.UpdateJobPriority(jobPriority));
+                }
+            }
+
+            return BadRequest("Tenant doesn't exist");
+        }
+        
+        [HttpDelete("priority")]
+        public async Task<ActionResult<bool>> DeletePriority(Guid id)
+        {
+            var tenant = (await _tenantService.GetTenantFromHostAsync());
+
+            if (tenant != null)
+            {
+                Console.WriteLine($"deleting priority {id}");
+                using (var context = _tenantService.CreateContext(tenant))
+                {
+                    var jobExtrasService = new JobExtrasService(context);
+                    return Ok(await jobExtrasService.DeleteJobPriority(id));
                 }
             }
 

@@ -29,10 +29,6 @@ export class AddRoomUserComponent implements OnInit
 
   GetUsers (): User[]
   {
-    // let users: User[] = [];
-    // employments.forEach(employment => {
-    //   users.push(this.tenantService.Tenant.employments.find(x => x.id == employment.userId));
-    // });
     return this.userService.TenantEmployments.filter(user => this.room.memberships.find(mem => mem.userId != user.id));
   }
 

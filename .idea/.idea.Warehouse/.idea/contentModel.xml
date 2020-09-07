@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.4.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.api.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.pdb" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Warehouse.sln" t="IncludeFlat" />
       <e p="Warehouse.Test" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Warehouse.Test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Seeds" t="Include">
+          <e p="TenantDataContextTestSeed.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="JobService.Tests" t="Include">
+            <e p="AddUserAsync.cs" t="Include" />
+            <e p="CreateJobAsync.cs" t="Include" />
+            <e p="DeleteJobAsync.cs" t="Include" />
+            <e p="GetAllJobsAsync.cs" t="Include" />
+            <e p="GetJobAsync.cs" t="Include" />
+            <e p="RemoveUserAsync.cs" t="Include" />
+            <e p="UpdateJobAsync.cs" t="Include" />
+          </e>
+        </e>
+        <e p="UnitTest1.cs" t="Include" />
         <e p="Warehouse.Test.csproj" t="IncludeRecursive" />
       </e>
       <e p="Warehouse.Web" t="IncludeRecursive">
@@ -206,9 +236,13 @@
                   <e p="add-project-user.component.ts" t="Include" />
                 </e>
                 <e p="config" t="Include">
+                  <e p="basic-project-config" t="Include">
+                    <e p="basic-project-config.component.css" t="Include" />
+                    <e p="basic-project-config.component.html" t="Include" />
+                    <e p="basic-project-config.component.ts" t="Include" />
+                  </e>
                   <e p="config.component.css" t="Include" />
                   <e p="config.component.html" t="Include" />
-                  <e p="config.component.spec.ts" t="Include" />
                   <e p="config.component.ts" t="Include" />
                 </e>
                 <e p="events" t="Include">
@@ -325,9 +359,29 @@
                   <e p="create-tenant.component.ts" t="Include" />
                 </e>
                 <e p="tenant-config" t="Include">
+                  <e p="basic-config" t="Include">
+                    <e p="basic-config.component.css" t="Include" />
+                    <e p="basic-config.component.html" t="Include" />
+                    <e p="basic-config.component.ts" t="Include" />
+                  </e>
+                  <e p="priority-config" t="Include">
+                    <e p="priority-config.component.css" t="Include" />
+                    <e p="priority-config.component.html" t="Include" />
+                    <e p="priority-config.component.ts" t="Include" />
+                  </e>
+                  <e p="status-config" t="Include">
+                    <e p="status-config.component.css" t="Include" />
+                    <e p="status-config.component.html" t="Include" />
+                    <e p="status-config.component.ts" t="Include" />
+                  </e>
                   <e p="tenant-config.component.css" t="Include" />
                   <e p="tenant-config.component.html" t="Include" />
                   <e p="tenant-config.component.ts" t="Include" />
+                  <e p="type-config" t="Include">
+                    <e p="type-config.component.css" t="Include" />
+                    <e p="type-config.component.html" t="Include" />
+                    <e p="type-config.component.ts" t="Include" />
+                  </e>
                 </e>
                 <e p="tenant-nav" t="Include">
                   <e p="tenant-nav.component.css" t="Include" />
@@ -413,6 +467,8 @@
             <e p="20200902231111_jobfinish.Designer.cs" t="Include" />
             <e p="20200904073048_extrasorders.cs" t="Include" />
             <e p="20200904073048_extrasorders.Designer.cs" t="Include" />
+            <e p="20200906184315_projectshort.cs" t="Include" />
+            <e p="20200906184315_projectshort.Designer.cs" t="Include" />
             <e p="TenantDataContextModelSnapshot.cs" t="Include" />
           </e>
         </e>

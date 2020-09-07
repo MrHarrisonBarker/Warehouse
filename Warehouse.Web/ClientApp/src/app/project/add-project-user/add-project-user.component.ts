@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectService} from "../../Services/project.service";
+import {UserService} from "../../Services/user.service";
+import {AuthService} from "../../Services/auth.service";
+import {User} from "../../Models/User";
 
 @Component({
   selector: 'app-add-project-user',
@@ -9,7 +12,7 @@ import {ProjectService} from "../../Services/project.service";
 export class AddProjectUserComponent implements OnInit
 {
 
-  constructor (public projectService: ProjectService)
+  constructor (public projectService: ProjectService,private userService: UserService, private authService: AuthService)
   {
   }
 
@@ -17,10 +20,13 @@ export class AddProjectUserComponent implements OnInit
   {
   }
 
-  AddUser (email: string)
+  GetUsers(): User[]
   {
-    this.projectService.AddUserAsync(email).subscribe(result => {
-      console.log(result);
-    })
+    return this.userService.TenantEmployments.filter(x => x.id != this.authService.GetUser().id && !this.projectService.GetCurrentProject().employments.includes(x.id));
+  }
+
+  AddUser (id: string)
+  {
+    this.projectService.AddUserAsync(id).subscribe();
   }
 }

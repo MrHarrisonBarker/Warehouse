@@ -15,6 +15,7 @@ export interface JobStatus
 export interface NewStatus
 {
   name: string;
+  order: number;
   colour: string;
   finished: boolean;
 }
@@ -31,6 +32,7 @@ export interface JobPriority
 export interface NewPriority
 {
   name: string;
+  order: number;
   colour: string;
 }
 
@@ -46,6 +48,7 @@ export interface JobType
 export interface NewType
 {
   name: string;
+  order: number;
   colour: string;
 }
 
@@ -59,10 +62,12 @@ export interface Job
 {
   id?: string;
   title: string;
+  link?: string;
   description: string;
   created?: Date;
   deadline: Date;
   finished?: Date;
+  commit: string;
 
   jobStatus: JobStatus;
   jobPriority: JobPriority;

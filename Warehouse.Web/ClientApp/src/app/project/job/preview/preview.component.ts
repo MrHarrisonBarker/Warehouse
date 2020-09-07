@@ -5,6 +5,7 @@ import {TenantService} from "../../../Services/tenant.service";
 import {JobService} from "../../../Services/job.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {UserService} from "../../../Services/user.service";
+import {ProjectService} from "../../../Services/project.service";
 
 @Component({
   selector: 'job-preview',
@@ -20,7 +21,8 @@ export class PreviewComponent implements OnInit
     public tenantService: TenantService,
     private jobService: JobService,
     private _snackBar: MatSnackBar,
-    private userService: UserService)
+    private userService: UserService,
+    public projectService: ProjectService)
   {
   }
 
