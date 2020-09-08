@@ -30,6 +30,10 @@
           <mat-icon>subject</mat-icon>
           <div class="iconAligned">{{GetListFromStore().name}}</div>
         </div>
+        <div class="d-flex flex-row overflow-auto">
+          <avatar [User]="user" *ngFor="let user of GetListUsers()" [listId]="currentListId" [Width]="40" class="mr-1"></avatar>
+          <div id="addListUser" (click)="AddUser()"></div>
+        </div>
         <button mat-stroked-button color="primary" (click)="newJob()">New job</button>
       </div>
 

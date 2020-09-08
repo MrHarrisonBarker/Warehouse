@@ -28,6 +28,7 @@ namespace Warehouse.Contexts
         public DbSet<JobEmployment> JobEmployment { get; set; }
         public DbSet<RoomMembership> RoomMembership { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Projects

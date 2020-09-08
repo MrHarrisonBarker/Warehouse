@@ -2,7 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
-import {List, CreateList, ListViewModel} from "../Models/List";
+import {List, CreateList, ListViewModel, AddListUser} from "../Models/List";
 import {AuthService} from "./auth.service";
 import {ProjectService} from "./project.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
@@ -18,6 +18,9 @@ export interface IListService
 
   CreateListAsync(createList: CreateList): Observable<List>;
 
+  AddUserAsync(userId: any, listId: string) : Observable<boolean>
+  RemoveUserAsync(userId: any, listId: string) : Observable<boolean>
+
   MergeLists(lists: List[]): void
 }
 
@@ -29,7 +32,13 @@ export class ListService implements IListService
   private BaseUrl: string;
   private Lists: ListViewModel[] = [];
 
-  constructor (private http: HttpClient, @Inject('BASE_URL') baseUrl: string,private _snackBar:MatSnackBar, private authService: AuthService, private jobService: JobService)
+  constructor (
+    private http: HttpClient,
+    @Inject('BASE_URL') baseUrl: string,
+    private _snackBar:MatSnackBar,
+    private authService: AuthService,
+    private jobService: JobService
+  )
   {
     this.BaseUrl = baseUrl;
   }
@@ -47,7 +56,7 @@ export class ListService implements IListService
         created: list.created,
         deadline: list.deadline,
         description: list.description,
-        employments: list.employments,
+        employments: list.employments != null ? list.employments.map(user => user.userId) : [],
         id: list.id,
         name: list.name,
         project: list.project,
@@ -75,7 +84,7 @@ export class ListService implements IListService
           created: list.created,
           deadline: list.deadline,
           description: list.description,
-          employments: list.employments,
+          employments: list.employments != null ? list.employments.map(user => user.userId) : [],
           id: list.id,
           name: list.name,
           project: list.project,
@@ -113,7 +122,7 @@ export class ListService implements IListService
         created: list.created,
         deadline: list.deadline,
         description: list.description,
-        employments: list.employments,
+        employments: list.employments != null ? list.employments.map(user => user.userId) : [],
         id: list.id,
         name: list.name,
         project: list.project,
@@ -131,5 +140,41 @@ export class ListService implements IListService
 
   GetList(id:string): ListViewModel {
     return this.Lists.find(x => x.id == id);
+  }
+
+  public AddUserAsync(userId: any, listId: string) : Observable<boolean>
+  {
+    let addListUser: AddListUser = {
+      listId: listId,
+      userId: userId
+    }
+
+    return this.http.post<boolean>(this.BaseUrl + 'api/list/adduser', addListUser).pipe(map(added => {
+      if (added) {
+        this.Lists[this.Lists.findIndex(x => x.id == listId)].employments.push(userId);
+        this._snackBar.open(`Added user to list"`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to add user to list`,'close',{duration:1000});
+      }
+      return added;
+    }));
+  }
+
+  RemoveUserAsync(userId: any, listId: string): Observable<boolean> {
+    let addListUser: AddListUser = {
+      listId: listId,
+      userId: userId
+    }
+
+    return this.http.post<boolean>(this.BaseUrl + 'api/list/removeuser', addListUser).pipe(map(removed => {
+      if (removed) {
+        let index = this.Lists.findIndex(x => x.id == listId)
+        this.Lists[index].employments = this.Lists[index].employments.filter(x => x != userId);
+        this._snackBar.open(`Removed user from list"`,'close',{duration:1000});
+      } else {
+        this._snackBar.open(`Failed to remove user from list`,'close',{duration:1000});
+      }
+      return removed;
+    }));
   }
 }

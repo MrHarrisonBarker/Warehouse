@@ -22,6 +22,7 @@ import {AddRoomUserComponent} from "./rooms/add-room-user/add-room-user.componen
 import {BasicProjectConfigComponent} from "./config/basic-project-config/basic-project-config.component";
 import {SharedModule} from "../shared.module";
 import { AddJobWorkerComponent } from './job/add-job-worker/add-job-worker.component';
+import { AddListUserComponent } from './lists/add-list-user/add-list-user.component';
 
 
 
@@ -44,7 +45,8 @@ import { AddJobWorkerComponent } from './job/add-job-worker/add-job-worker.compo
     JobsComponent,
     BasicProjectConfigComponent,
     ModulesComponent,
-    AddJobWorkerComponent
+    AddJobWorkerComponent,
+    AddListUserComponent
   ],
   imports: [
     SharedModule,
@@ -60,6 +62,6 @@ import { AddJobWorkerComponent } from './job/add-job-worker/add-job-worker.compo
       {path: ':id/modules', component: ModulesComponent, canActivate: [AuthGuard]},
     ])
   ],
-  entryComponents: [NewListComponent,NewRoomComponent,AddProjectUserComponent,AddRoomUserComponent,AddJobWorkerComponent]
+  entryComponents: [AddListUserComponent,NewListComponent,NewRoomComponent,AddProjectUserComponent,AddRoomUserComponent,AddJobWorkerComponent]
 })
 export class ProjectModule { }

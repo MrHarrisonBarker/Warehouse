@@ -16,9 +16,6 @@ namespace Warehouse.Models
         public string Password { get; set; }
         public string Token { get; set; }
 
-        // many to many role
-        public IList<Permission> Permissions { get; set; }
-
         // many to many TenantConfig
         [JsonIgnore] public IList<Employment> Employments { get; set; }
 

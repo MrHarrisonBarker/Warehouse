@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TenantService} from "../../Services/tenant.service";
+import {UserService} from "../../Services/user.service";
+import {User} from "../../Models/User";
 
 @Component({
   selector: 'app-tenant-users',
@@ -9,7 +11,10 @@ import {TenantService} from "../../Services/tenant.service";
 export class TenantUsersComponent implements OnInit
 {
 
-  constructor (public tenantService: TenantService)
+  constructor (
+    public tenantService: TenantService,
+    public userService: UserService
+  )
   {
   }
 
@@ -17,4 +22,8 @@ export class TenantUsersComponent implements OnInit
   {
   }
 
+  RemoveUser(user: User)
+  {
+    this.tenantService.RemoveUserAsync(user.email).subscribe();
+  }
 }

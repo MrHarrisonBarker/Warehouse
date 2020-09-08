@@ -4,8 +4,10 @@
   height: 15px;
   background-color: #8BC34A;
   border-radius: 100%;
-  bottom: 5.25px;
-  right: 5.25px;
+  /*bottom: 5.25px;*/
+  /*right: 5.25px;*/
+  bottom: 5%;
+  right: 5%;
   border: solid transparent 2px;
 }
 
@@ -20,7 +22,7 @@ img {
   color: white;
 }
 
-#removeUser{
+.removeUser{
   background-color: white;
   width: 15px;
   height: 15px;

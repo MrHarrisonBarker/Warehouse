@@ -34,6 +34,7 @@
 #memberList {
   /*background: #676f76;*/
   /*padding: 1rem 0 0 0;*/
+  margin: 0.5rem 0;
 }
 
 .activeRoom {
@@ -84,4 +85,31 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
+}
+
+#addUser {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #7f8b95;
+  box-shadow: 0 0 2px #47454582;
+  cursor: pointer;
+}
+
+#addUser:hover {
+  background: #959ea5;
+}
+
+#addUser::before {
+  content: "+";
+  height: 60px;
+  width: 60px;
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: courier;
+  color: #eeeeee;
 }

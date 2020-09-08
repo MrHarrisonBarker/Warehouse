@@ -1,0 +1,12 @@
+.inlineUser {
+  display: flex;
+  flex-direction: row;
+  padding: 0.1rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.inlineUser:hover {
+  background: aliceblue;
+}

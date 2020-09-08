@@ -35,7 +35,8 @@
   <div class="d-flex flex-column flex-grow-1 px-3">
 
     <div class="d-flex flex-row" id="memberList">
-      <avatar *ngFor="let user of users" [User]="user"></avatar>
+      <avatar class="mr-1" *ngFor="let user of users" [User]="user" [roomId]="currentRoomId"></avatar>
+      <div id="addUser" (click)="AddUser(chatService.GetRoomFromStore(currentRoomId))"></div>
     </div>
 
     <!--    [scrollTop]="room.scrollHeight"-->

@@ -13,5 +13,7 @@ namespace Warehouse.Models
         public IList<ListEmployment> ListEmployments { get; set; }
         public IList<RoomMembership> RoomMemberships { get; set; }
         public IList<JobEmployment> JobEmployments { get; set; }
+        
+        public Role Role { get; set; }
     }
 }

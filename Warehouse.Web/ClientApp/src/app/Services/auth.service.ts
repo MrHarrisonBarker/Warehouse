@@ -15,7 +15,7 @@ import {UserService} from "./user.service";
 })
 export class AuthService
 {
-  private accessToken: string = null;
+  public accessToken: string = null;
   private readonly BaseUrl: string;
   private user: User;
 

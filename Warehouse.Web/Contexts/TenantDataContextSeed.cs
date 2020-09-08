@@ -70,10 +70,10 @@ namespace Warehouse.Contexts
                 });
             }
 
-
             var user = new UserId()
             {
                 Id = userId,
+                Role = Role.Owner,
                 JobEmployments = jobEmployments,
                 ListEmployments = new List<ListEmployment>()
                 {
@@ -91,8 +91,7 @@ namespace Warehouse.Contexts
                     {
                         ListId = list3Id,
                         UserId = userId
-                    }
-                    
+                    },
                 },
                 ProjectEmployments = new List<ProjectEmployment>()
                 {

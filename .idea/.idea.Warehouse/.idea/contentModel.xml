@@ -208,6 +208,7 @@
               <e p="app.module.ts" t="Include" />
               <e p="app.server.module.ts" t="Include" />
               <e p="auth.guard.ts" t="Include" />
+              <e p="auth.interceptor.ts" t="Include" />
               <e p="login" t="Include">
                 <e p="login.component.css" t="Include" />
                 <e p="login.component.html" t="Include" />
@@ -286,6 +287,11 @@
                   </e>
                 </e>
                 <e p="lists" t="Include">
+                  <e p="add-list-user" t="Include">
+                    <e p="add-list-user.component.css" t="Include" />
+                    <e p="add-list-user.component.html" t="Include" />
+                    <e p="add-list-user.component.ts" t="Include" />
+                  </e>
                   <e p="lists.component.css" t="Include" />
                   <e p="lists.component.html" t="Include" />
                   <e p="lists.component.ts" t="Include" />
@@ -479,6 +485,8 @@
           <e p="20200816183853_fluff.Designer.cs" t="Include" />
           <e p="20200821163412_colours.cs" t="Include" />
           <e p="20200821163412_colours.Designer.cs" t="Include" />
+          <e p="20200907182851_roleupdates.cs" t="Include" />
+          <e p="20200907182851_roleupdates.Designer.cs" t="Include" />
           <e p="MultiTenantContextModelSnapshot.cs" t="Include" />
           <e p="TenantData" t="Include">
             <e p="20200821203854_data.cs" t="Include" />
@@ -495,14 +503,14 @@
             <e p="20200907014232_modules.Designer.cs" t="Include" />
             <e p="20200907021814_projectmodules.cs" t="Include" />
             <e p="20200907021814_projectmodules.Designer.cs" t="Include" />
+            <e p="20200907182837_roleupdates.cs" t="Include" />
+            <e p="20200907182837_roleupdates.Designer.cs" t="Include" />
             <e p="TenantDataContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
         <e p="Models" t="Include">
           <e p="Employment.cs" t="Include" />
           <e p="OnlineUser.cs" t="Include" />
-          <e p="Permission.cs" t="Include" />
-          <e p="Role.cs" t="Include" />
           <e p="Tenant" t="Include">
             <e p="Joins" t="Include">
               <e p="JobEmployment.cs" t="Include" />
@@ -523,6 +531,7 @@
               <e p="Project.cs" t="Include" />
               <e p="Room.cs" t="Include" />
             </e>
+            <e p="Role.cs" t="Include" />
             <e p="TenantConfig.cs" t="Include" />
             <e p="UserId.cs" t="Include" />
           </e>

@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
@@ -35,14 +35,15 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AddTenantUserComponent} from './tenant/add-tenant-user/add-tenant-user.component';
 import {WINDOW_PROVIDERS} from "./window.providers";
 import {TenantUsersComponent} from './tenant/tenant-users/tenant-users.component';
-import { ColorPickerModule } from 'ngx-color-picker';
+import {ColorPickerModule} from 'ngx-color-picker';
 import {ImageCropperModule} from "ngx-image-cropper";
-import { BasicConfigComponent } from './tenant/tenant-config/basic-config/basic-config.component';
-import { StatusConfigComponent } from './tenant/tenant-config/status-config/status-config.component';
-import { TypeConfigComponent } from './tenant/tenant-config/type-config/type-config.component';
-import { PriorityConfigComponent } from './tenant/tenant-config/priority-config/priority-config.component';
+import {BasicConfigComponent} from './tenant/tenant-config/basic-config/basic-config.component';
+import {StatusConfigComponent} from './tenant/tenant-config/status-config/status-config.component';
+import {TypeConfigComponent} from './tenant/tenant-config/type-config/type-config.component';
+import {PriorityConfigComponent} from './tenant/tenant-config/priority-config/priority-config.component';
 import {SharedModule} from "./shared.module";
 import {CommonModule} from "@angular/common";
+import {AuthInterceptor} from "./auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -74,7 +75,11 @@ import {CommonModule} from "@angular/common";
     SharedModule,
     RouterModule.forRoot([
       {path: '', component: LoginComponent, pathMatch: 'full'},
-      {path: 'project' , loadChildren: () => import('./project/project.module').then(m => m.ProjectModule), canActivate: [AuthGuard]},
+      {
+        path: 'project',
+        loadChildren: () => import('./project/project.module').then(m => m.ProjectModule),
+        canActivate: [AuthGuard]
+      },
       {path: 'dashboard', component: TenantDashboardComponent, canActivate: [AuthGuard]},
       {path: 'overview', component: OverviewComponent, canActivate: [AuthGuard]},
       {path: 'config', component: TenantConfigComponent, canActivate: [AuthGuard]},
@@ -82,7 +87,10 @@ import {CommonModule} from "@angular/common";
     ])
   ],
   entryComponents: [NewJobComponent, NewProjectComponent, CreateTenantComponent, SignupComponent, AddTenantUserComponent, JobComponent],
-  providers: [WINDOW_PROVIDERS, OnlineUserService],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    WINDOW_PROVIDERS,
+    OnlineUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

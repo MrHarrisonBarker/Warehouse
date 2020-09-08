@@ -65,6 +65,8 @@ namespace Warehouse
                         ValidateAudience = false
                     };
                 });
+            
+            
 
             services.AddSignalR(o =>
             {

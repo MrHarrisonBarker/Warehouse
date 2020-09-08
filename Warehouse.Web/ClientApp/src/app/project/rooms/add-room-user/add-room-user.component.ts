@@ -34,8 +34,6 @@ export class AddRoomUserComponent implements OnInit
 
   AddUser (userId: string)
   {
-    this.roomService.AddUser(userId,this.room.id).subscribe(result => {
-      console.log(result);
-    })
+    this.roomService.AddUserAsync(userId,this.room.id).subscribe();
   }
 }

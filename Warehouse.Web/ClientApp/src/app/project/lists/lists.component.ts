@@ -10,6 +10,9 @@ import {Job, JobByStatus} from "../../Models/Job";
 import {ProjectViewModel} from "../../Models/Project";
 import {JobService} from "../../Services/job.service";
 import {NewListComponent} from "./new-list/new-list.component";
+import {User} from "../../Models/User";
+import {UserService} from "../../Services/user.service";
+import {AddListUserComponent} from "./add-list-user/add-list-user.component";
 
 @Component({
   selector: 'app-lists',
@@ -31,7 +34,8 @@ export class ListsComponent implements OnInit
     private listService: ListService,
     public dialog: MatDialog,
     public tenantService: TenantService,
-    private jobService: JobService)
+    private jobService: JobService,
+    private userService: UserService)
   {
   }
 
@@ -142,5 +146,15 @@ export class ListsComponent implements OnInit
     } else {
       this.searchResults = null
     }
+  }
+
+  GetListUsers() : User[]
+  {
+    return this.userService.TenantEmployments.filter(x => this.GetListFromStore().employments.includes(x.id));
+  }
+
+  AddUser()
+  {
+    this.dialog.open(AddListUserComponent,{data:this.GetListFromStore()});
   }
 }

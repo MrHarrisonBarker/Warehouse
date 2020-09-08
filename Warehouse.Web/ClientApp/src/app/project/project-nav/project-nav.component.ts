@@ -44,7 +44,7 @@ export class ProjectNavComponent implements OnInit
 
   NavigateToColleagues ()
   {
-    this.router.navigateByUrl(`/project/${this.projectService.currentProjectId}/colleagues`);
+    this.router.navigateByUrl(`/project/${this.projectService.currentProjectId}/users`);
   }
 
   NavigateToWork ()

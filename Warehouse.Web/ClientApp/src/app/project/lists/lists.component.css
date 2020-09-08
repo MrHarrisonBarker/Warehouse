@@ -84,3 +84,30 @@ label {
   height: 100%;
   overflow: auto;
 }
+
+#addListUser {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7f8b95;
+  box-shadow: 0 0 2px #47454582;
+  cursor: pointer;
+}
+
+#addListUser:hover {
+  background: #959ea5;
+}
+
+#addListUser::before {
+  content: "+";
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: courier;
+  color: #eeeeee;
+}

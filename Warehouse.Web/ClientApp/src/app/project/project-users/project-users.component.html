@@ -1,1 +1,15 @@
-<p>project-users works!</p>
+<div class="d-flex h-100">
+  <app-project-nav></app-project-nav>
+
+  <div class="d-flex flex-column w-100 h-100">
+    <div *ngFor="let user of GetProjectsUsers()" class="inlineUser">
+      <div>{{user.displayName}}</div>
+      <div class="my-auto greyText font-italic">{{user.email}}</div>
+      <div class="d-flex flex-row">
+        <img class="my-auto mr-1" width="30px" height="30px" style="border-radius: 25%" [src]="user.avatar">
+        <button mat-icon-button class="my-auto" (click)="RemoveUser(user)"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+  </div>
+
+</div>
